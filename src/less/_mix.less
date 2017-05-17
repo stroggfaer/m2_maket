@@ -1,0 +1,73 @@
+// main: style.less
+
+// Микси псих-холдер;
+.input-placeholder(@color;) {
+    input[placeholder] {
+      color:@color;
+    }
+    ::-webkit-input-placeholder {
+       color: @color;
+    }
+    :-moz-placeholder {/* Firefox 18- */
+      color: @color;
+    }
+    ::-moz-placeholder {/* Firefox 19+ */
+      color: @color;
+    }
+    :-ms-input-placeholder {
+      color: @color;
+    }
+}
+// Кнопка button class . button-mod;
+.button-attr(@color;@w:100%;@padding:10px 0px;@size:16px;@option:10%;) {
+    button {
+        &.button-mod {
+           background: @color;
+           border: none;
+           color: @white;
+           padding: @padding;
+           width: @w;
+           box-shadow: none;
+           font-size: @size;
+        }
+        &:hover {
+          background: lighten(@color, @option);
+          color: @white;
+        }
+     }
+}
+.button-border(@w:100%; @min-w: auto; @max-w: auto;@padding:10px 0px;) {
+    border: 1px solid @white - 130;
+    border-radius:3px;
+    padding: @padding;
+    text-align: center;
+    cursor: pointer;
+    width: @w;
+    min-width: @min-w;
+    max-width: @max-w;
+    div {
+      color: @white;
+      font-size: 14px;
+    }
+    &:hover{
+
+    }
+}
+.wrapper_mix() {
+   min-width: 320px;
+   max-width: 740px;
+   margin: 0 auto;
+}
+.width-fn(@w:100%; @min-w: auto; @max-w: auto;) {
+  width: @w;
+  min-width: @min-w;
+  max-width: @max-w;
+}
+// Заголовок;
+.title_mix(@padding:15px 0;){
+    .title {
+      font-size: @font-size-16;
+      text-transform: uppercase;
+      padding: @padding;
+    }
+}

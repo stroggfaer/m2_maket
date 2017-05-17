@@ -1,0 +1,187 @@
+// out: style.css,
+
+// Поключаем база;
+@import "_base.less";
+
+// Поключаем миксы;
+@import "_mix.less";
+
+@import "@{bootstrap}utilities";
+
+
+html, body, .wrapper{
+  height: 100%;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   font-size: @font-size-14;
+   color: @base_color;
+   background: lighten(@black,20%);
+}
+.bg {
+  background-color: @base_color;
+  background-image: url("@{i}bg_blur.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  min-width: 320px;
+  max-width: 740px;
+  margin: 0 auto;
+  z-index: -1;
+  .bg_blur {
+    background-image: url("@{i}bg.png");
+  }
+}
+// Запрет скроллит;
+._menu_o {
+    overflow: hidden;
+}
+//
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+.wrapper {
+   display: table;
+   width: 100%;
+  .wrapper_mix();
+}
+#footer {
+  display: table-row;
+}
+
+  /*---Шапка---*/
+#header {
+   width: 100%;
+   height: 50px;
+   background: @black;
+   left: 0;
+   position: fixed;
+   right: 0;
+   top: 0;
+   z-index: 300;
+  .wrapper_mix();
+     // Контейнер;
+     .container-fluid {
+         padding-top: 11px;
+         padding-bottom: 11px;
+     }
+     /*--Сетка xs-4 мод padding 5px --*/
+     .col-mod {
+        .make-xs-column(4,0px);
+     }
+     div.logo {
+         text-align: center;
+         img {
+           width: 155px;
+         }
+     }
+    div.login-header {
+        height: 20px;
+        text-align: right;
+        margin: 0 0 0 auto;
+        width: 40px;
+        span {
+           color:@white;
+           font-size: 25px;
+        }
+    }
+  .clearfix();
+}
+/*---Центер---*/
+#center {
+    margin-top: 50px;
+}
+/*---Меню---*/
+#menu_left {
+    background: fade(@black,40%);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    z-index: 200;
+    cursor: auto;
+    .menu-content {
+         margin: 0 auto;
+         overflow: hidden;
+         height: 100%;
+        .wrapper_mix();
+        .menu-left-rel {
+            background: #bdbdbd ;
+            color: @white;
+            margin-top: 50px;
+            width: 260px;
+            position: relative;
+            left: -270px;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            height: 100%;
+            .panel-header-menu,.panel-footer-menu {
+                 height: 100px;
+            }
+            .items {
+                margin: 0px;
+                .item {
+                  display: block;
+                  font-size: 16px;
+                  padding: 10px 5px;
+                    &:hover {
+                      background: @reg2;
+                    }
+                }
+            }
+        }
+    }
+}
+/*---Подвал---*/
+#footer {
+  width: 100%;
+  height: 50px;
+
+  background: @black;
+  .copyright {
+      color: @white;
+      display: block;
+      font-size: 11px;
+      padding: 30px 0 0;
+  }
+}
+
+
+/*Главное страница*/
+.main {
+   color: @white;
+  .title_mix();
+   // Форма войти;
+   .form1__com,.news{
+       margin: 0px -15px;
+       padding: 10px 15px;
+       background: fade(@grey,20%);
+   }
+   // Новости;
+   .news {
+       background: fade(@black,40%);
+   }
+}
+
+// Поключаем ЛК ;
+@import "my.less";

@@ -1,0 +1,16 @@
+/* Large devices (large desktops, 1200px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Small devices (tablets, 768px and up) */
+/* Small devices (mobile, 520px and up) */
+@media only screen and (max-width: 520px) {
+  #header .container-fluid {
+    display: table;
+    width: 100%;
+  }
+  #header .col-mod {
+    display: table-cell;
+    float: none;
+    width: auto;
+    vertical-align: top;
+  }
+}

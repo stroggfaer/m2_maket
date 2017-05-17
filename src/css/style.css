@@ -1,0 +1,423 @@
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+}
+.affix {
+  position: fixed;
+}
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  background: #333333;
+}
+.bg {
+  background-color: #000;
+  background-image: url("../images/bg_blur.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  min-width: 320px;
+  max-width: 740px;
+  margin: 0 auto;
+  z-index: -1;
+}
+.bg .bg_blur {
+  background-image: url("../images/bg.png");
+}
+._menu_o {
+  overflow: hidden;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+a:focus {
+  outline: none;
+}
+.wrapper {
+  display: table;
+  width: 100%;
+  min-width: 320px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+#footer {
+  display: table-row;
+}
+/*---Шапка---*/
+#header {
+  width: 100%;
+  height: 50px;
+  background: #000;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 300;
+  min-width: 320px;
+  max-width: 740px;
+  margin: 0 auto;
+  /*--Сетка xs-4 мод padding 5px --*/
+}
+#header .container-fluid {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+#header .col-mod {
+  position: relative;
+  float: left;
+  width: 33.33333333%;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#header div.logo {
+  text-align: center;
+}
+#header div.logo img {
+  width: 155px;
+}
+#header div.login-header {
+  height: 20px;
+  text-align: right;
+  margin: 0 0 0 auto;
+  width: 40px;
+}
+#header div.login-header span {
+  color: #fff;
+  font-size: 25px;
+}
+#header:before,
+#header:after {
+  content: " ";
+  display: table;
+}
+#header:after {
+  clear: both;
+}
+#header:before,
+#header:after {
+  content: " ";
+  display: table;
+}
+#header:after {
+  clear: both;
+}
+/*---Центер---*/
+#center {
+  margin-top: 50px;
+}
+/*---Меню---*/
+#menu_left {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0px;
+  z-index: 200;
+  cursor: auto;
+}
+#menu_left .menu-content {
+  overflow: hidden;
+  height: 100%;
+  min-width: 320px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+#menu_left .menu-content .menu-left-rel {
+  background: #bdbdbd ;
+  color: #fff;
+  margin-top: 50px;
+  width: 260px;
+  position: relative;
+  left: -270px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+#menu_left .menu-content .menu-left-rel .panel-header-menu,
+#menu_left .menu-content .menu-left-rel .panel-footer-menu {
+  height: 100px;
+}
+#menu_left .menu-content .menu-left-rel .items {
+  margin: 0px;
+}
+#menu_left .menu-content .menu-left-rel .items .item {
+  display: block;
+  font-size: 16px;
+  padding: 10px 5px;
+}
+#menu_left .menu-content .menu-left-rel .items .item:hover {
+  background: #C81A18;
+}
+/*---Подвал---*/
+#footer {
+  width: 100%;
+  height: 50px;
+  background: #000;
+}
+#footer .copyright {
+  color: #fff;
+  display: block;
+  font-size: 11px;
+  padding: 30px 0 0;
+}
+/*Главное страница*/
+.main {
+  color: #fff;
+}
+.main .title {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+.main .form1__com,
+.main .news {
+  margin: 0px -15px;
+  padding: 10px 15px;
+  background: rgba(203, 203, 203, 0.2);
+}
+.main .news {
+  background: rgba(0, 0, 0, 0.4);
+}
+/*----Личный кабинет----
+ Version 2.0.0
+*/
+.my {
+  color: #fff;
+}
+.my .title {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+.my .client-info {
+  padding: 10px 0px;
+}
+.my .client-info:before,
+.my .client-info:after {
+  content: " ";
+  display: table;
+}
+.my .client-info:after {
+  clear: both;
+}
+.my .client-info:before,
+.my .client-info:after {
+  content: " ";
+  display: table;
+}
+.my .client-info:after {
+  clear: both;
+}
+.my .client-info .photo-content {
+  float: left;
+  margin-right: 15px;
+  text-align: center;
+  position: relative;
+}
+.my .client-info .photo-content .update_photo {
+  cursor: pointer;
+  font-size: 20px;
+  height: 20px;
+  left: 0;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 54px;
+  width: 25px;
+  opacity: 0.8;
+}
+.my .client-info .photo-content .photo {
+  background: #fff;
+  border-radius: 100%;
+  height: 65px;
+  width: 65px;
+  overflow: hidden;
+}
+.my .client-info .photo-content .photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.my .client-info .info {
+  margin: 0px;
+}
+.my .client-info .info .i {
+  margin: 0 0 3px;
+  font-weight: bold;
+}
+.my .client-info .info .i.name {
+  font-size: 16px;
+}
+.my .widgets {
+  font-weight: bold;
+  font-size: 16px;
+}
+.my .widgets .item {
+  width: 100%;
+  padding: 5px 0px;
+}
+.my .widgets .col-mod {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.my .widgets .balance {
+  padding: 8px 0 2px;
+}
+.my .widgets .balance .money {
+  color: #11B342;
+}
+.my .widgets .balance-text {
+  font-size: 11px;
+  font-weight: normal;
+}
+.my .widgets .button_op {
+  margin-left: auto;
+}
+.my .reservations .tab .item {
+  border: 1px solid #7d7d7d;
+  border-radius: 3px;
+  padding: 5px 10px;
+  text-align: center;
+  cursor: pointer;
+  width: auto;
+  min-width: auto;
+  max-width: auto;
+  display: inline-block;
+  margin-right: 5px;
+}
+.my .reservations .tab .item div {
+  color: #fff;
+  font-size: 14px;
+}
+.my .reservations .tab .item.open {
+  border-bottom: 2px solid #fff;
+}
+.my .reservations .tab:before,
+.my .reservations .tab:after {
+  content: " ";
+  display: table;
+}
+.my .reservations .tab:after {
+  clear: both;
+}
+.my .reservations .tab:before,
+.my .reservations .tab:after {
+  content: " ";
+  display: table;
+}
+.my .reservations .tab:after {
+  clear: both;
+}
+.my .reservations .select-date {
+  margin-top: 20px;
+}
+.my .reservations .select-date .margin-r {
+  margin-right: 8px;
+}
+.my .reservations .select-date .item {
+  padding: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+.my .reservations .select-date .item::before {
+  content: "\e114";
+  width: 0px;
+  height: 0px;
+  font-family: 'Glyphicons Halflings';
+  float: right;
+  font-size: 11px;
+  margin: 3px 0 0 4px;
+}
+.my .reservations .select-date .item span {
+  font-size: 17px;
+  padding: 0 5px 0 0;
+  vertical-align: top;
+}
+.my .block-menu {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: table;
+}
+.my .block-menu .col-xs-6 {
+  padding-left: 5px;
+  padding-right: 5px;
+  display: table;
+  margin-bottom: 10px;
+}
+.my .block-menu .name {
+  border: 1px solid #fff;
+  display: table-cell;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.my .block-menu .name:hover {
+  background: rgba(203, 203, 203, 0.2);
+}

@@ -1,0 +1,33 @@
+{
+  "name": "m2",
+  "version": "2.0.0",
+  "description": "mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "m2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stroggfaer/m2.git"
+  },
+  "keywords": [
+    "m2"
+  ],
+  "author": "Rendzhifaer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stroggfaer/m2/issues"
+  },
+  "homepage": "https://github.com/stroggfaer/m2#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-debug": "^3.1.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-less": "^3.3.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-watch": "^4.3.11",
+    "rimraf": "^2.6.1"
+  }
+}

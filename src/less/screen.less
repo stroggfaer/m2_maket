@@ -1,0 +1,44 @@
+// main: screen.less
+
+// Поключаем база;
+@import "_base.less";
+
+// Поключаем миксы;
+@import "_mix.less";
+
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media only screen and (max-width: @screen-lg-min) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (max-width: @screen-md-min) {
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (max-width: @screen-sm-min) {
+
+}
+
+/* Small devices (mobile, 520px and up) */
+@media only screen and (max-width: @screen-mobile-min) {
+  #header {
+    .container-fluid {
+      display: table;
+      width: 100%;
+    }
+     .col-mod{
+        display: table-cell;
+        float: none;
+        width: auto;
+        vertical-align: top;
+     }
+  }
+}
+@media only screen and (max-width: 355px) {
+
+}
+
