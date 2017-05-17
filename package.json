@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stroggfaer/m2.git"
+    "url": "git+https://github.com/stroggfaer/m2_maket.git"
   },
   "keywords": [
     "m2"
@@ -16,9 +16,9 @@
   "author": "Rendzhifaer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stroggfaer/m2/issues"
+    "url": "https://github.com/stroggfaer/m2_maket.git/issues"
   },
-  "homepage": "https://github.com/stroggfaer/m2#readme",
+  "homepage": "https://github.com/stroggfaer/m2_maket.git/#readme",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
