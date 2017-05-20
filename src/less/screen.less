@@ -15,6 +15,119 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media only screen and (max-width: @screen-md-min) {
+  .bg {
+     background-color: @base_color;
+     background-image: url("@{images_m}bg_blur.png");
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+    .bg_blur {
+        background-image: url("@{images_m}bg.png");
+    }
+  }
+   #center {
+      margin-top: 50px;
+      background:none;
+   }
+   .mobile {
+    display: block;
+   }
+   .desktop {
+    display: none;
+   }
+
+  /*Анимерованый бутерброд*/
+  .menu_qml();
+
+   #header {
+     height: 50px;
+     background: @black;
+     left: 0;
+     position: fixed;
+     right: 0;
+     top: 0;
+     z-index: 300;
+     .wrapper_mix();
+     // Контейнер;
+    .container-fluid {
+       padding-top: 11px;
+       padding-bottom: 11px;
+    }
+    /*--Сетка xs-4 мод padding 5px --*/
+    .col-mod {
+      .make-xs-column(4,0px);
+    }
+    div.logo {
+      text-align: center;
+      img {
+        width: 155px;
+      }
+    }
+    div.login-header {
+      height: 20px;
+      text-align: right;
+      margin: 0 0 0 auto;
+      width: 40px;
+      span {
+        color:@white;
+        font-size: 25px;
+      }
+    }
+    .clearfix();
+  }
+   #menu_left {
+    background: fade(@black,40%);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    z-index: 200;
+    cursor: auto;
+    display: none;
+    .menu-content {
+      margin: 0 auto;
+      overflow: hidden;
+      height: 100%;
+      .wrapper_mix();
+      .menu-left-rel {
+        background: @black;
+        color: @white;
+        margin-top: 50px;
+        width: 260px;
+        position: relative;
+        left: -270px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        height: 100%;
+        .panel-header-menu,.panel-footer-menu {
+
+        }
+        .items {
+          margin: 0px;
+          .item {
+            display: block;
+            font-size: 16px;
+            padding: 10px 5px;
+            &:hover {
+              background: @reg2;
+            }
+          }
+        }
+      }
+    }
+  }
+   #footer {
+      width: 100%;
+      height: 50px;
+
+      background: @black;
+      .copyright {
+        color: @white;
+        display: block;
+        font-size: 11px;
+        padding: 30px 0 0;
+      }
+  }
 
 }
 
@@ -26,16 +139,16 @@
 /* Small devices (mobile, 520px and up) */
 @media only screen and (max-width: @screen-mobile-min) {
   #header {
-    .container-fluid {
+    .container-fluid.mobile {
       display: table;
       width: 100%;
+      .col-mod{
+          display: table-cell;
+          float: none;
+          width: auto;
+          vertical-align: top;
+       }
     }
-     .col-mod{
-        display: table-cell;
-        float: none;
-        width: auto;
-        vertical-align: top;
-     }
   }
 }
 @media only screen and (max-width: 355px) {

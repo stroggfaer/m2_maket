@@ -8,22 +8,23 @@
 
 @import "@{bootstrap}utilities";
 
-
+// Нвстройка каркас;
 html, body, .wrapper{
   height: 100%;
 }
 
 body {
-   font-family: Arial, sans-serif;
-   font-size: @font-size-14;
-   color: @base_color;
-   background: lighten(@black,20%);
+  font-family: Arial, sans-serif;
+  font-size: @font-size-14;
+  color: @base_color;
+  background-color: lighten(@black,20%);
+  background : url('@{images_d}bg.jpg') no-repeat fixed 50% 0px transparent;
 }
 .bg {
+  /*
   background-color: @base_color;
-  background-image: url("@{i}bg_blur.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-image: url("@{images_d}bg.jpg");
+  background-repeat: no-repeat;*/
   bottom: 0;
   height: 100%;
   left: 0;
@@ -36,12 +37,13 @@ body {
   margin: 0 auto;
   z-index: -1;
   .bg_blur {
-    background-image: url("@{i}bg.png");
+     // background-image: url("@{images_m}bg.png");
   }
 }
+
 // Запрет скроллит;
 ._menu_o {
-    overflow: hidden;
+  overflow: hidden;
 }
 //
 ul, ol {
@@ -58,129 +60,339 @@ a {
     outline: none;
   }
 }
+// Белый;
+a.white-normal {
+   color: @white;
+   text-decoration: none;
+   &:hover {
+      color: @reg1;
+   }
+}
+// Черный
+a.black-normal {
+  color: #000000;
+  text-decoration: none;
+}
+a.black-normal:hover {
+  border-bottom: #000000 1px solid;
+}
+// Красный свет.
+a.red-normal {
+  color: @reg;
+  text-decoration: none;
+}
+a.red-normal:hover {
+  border-bottom: @reg 1px solid;
+}
+// Красный тем.
+a.red {
+  color: @reg1;
+  border-bottom: @reg1 1px dotted;
+  text-decoration: none;
+}
+a.red:hover {
+  border: medium none;
+}
 
 .wrapper {
-   display: table;
-   width: 100%;
+  display: table;
+  width: 100%;
   .wrapper_mix();
 }
-#footer {
-  display: table-row;
-}
-
-  /*---Шапка---*/
+/*---Шапка---*/
 #header {
-   width: 100%;
-   height: 50px;
-   background: @black;
-   left: 0;
-   position: fixed;
-   right: 0;
-   top: 0;
-   z-index: 300;
-  .wrapper_mix();
-     // Контейнер;
-     .container-fluid {
-         padding-top: 11px;
-         padding-bottom: 11px;
-     }
-     /*--Сетка xs-4 мод padding 5px --*/
-     .col-mod {
-        .make-xs-column(4,0px);
-     }
-     div.logo {
-         text-align: center;
-         img {
-           width: 155px;
-         }
-     }
-    div.login-header {
-        height: 20px;
-        text-align: right;
-        margin: 0 0 0 auto;
-        width: 40px;
-        span {
-           color:@white;
-           font-size: 25px;
+  // высота;
+  @top: 6px;
+
+  width: 100%;
+  height: 130px;
+  background: @black2;
+  .container-fluid.desktop {
+      color: @white;
+     .border-right{
+        &::after {
+           border-right: 1px dotted @grey1;
+           content: "";
+           height: 80px;
+           position: absolute;
+           right: -22px;
+           top: 0;
         }
+     }
+     .social {
+       margin: 12px 20px 0 0;
+       text-align: right;
+       a {
+          display: inline-block;
+       }
     }
+     .client {
+        position: relative;
+        margin: (@top + 18) 30px;
+        padding-top: 7px;
+        .badge{
+             position: absolute;
+             font-size: @font-size-11;
+             padding: 3px 5px;
+             top: 0;
+             left:  -2px;
+         }
+        .balans {
+           padding: 3px 0px 3px 30px;
+        }
+        a{
+            padding-left: 30px;
+        }
+        span {
+          text-transform: uppercase;
+          font-size: @font-size-12;
+          white-space: pre;
+          vertical-align: top;
+       }
+        .red {
+           margin-left: -3px;
+           padding-left: 34px;
+        }
+        .aut{
+            height: 48px;
+        }
+     }
+     .contacts{
+         margin: @top 0px
+      }
+     .logo-service {
+        margin: @top 0px;
+        padding-top: 7px;
+        text-align: right;
+     }
+  }
   .clearfix();
+
+}
+// Меню основной;
+#menu_left {
+   .desktop{
+       height: 100%;
+       background: #EBEBEB;
+       border-radius: 5px 5px 0px 0px;
+   }
+}
+#menu_left .desktop div.item, div.menu_bottom div.item {
+  padding: 20px 0px 20px 23px;
+  float: left;
+  position: relative;
+  a{
+    color: #0C0C0C;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover,&.open{
+      color: @reg;
+    }
+  }
+}
+// Контакты;
+#header .contacts,
+#footer .contacts{
+     div.phone {
+        color: @white;
+        font-size: 31px;
+        font-weight: bold;
+        font-style: italic;
+      }
+      span.reg {
+        color: @reg1;
+        text-transform: none;
+      }
+      span.time {
+         font-size: 10px;
+         margin: 0px 0px 0px 2px;
+         vertical-align: super;
+      }
+      div.des {
+         margin: 9px 0px 0px 0px;
+         color: @white;
+         font-size: 11px;
+         text-transform: uppercase;
+         white-space: nowrap;
+      }
+      table.contact span.grey {
+          border-bottom: 1px dotted @grey;
+          color: #a1a0a0;
+          font-style: italic;
+          font-weight: bold;
+          line-height: 22px;
+      }
 }
 /*---Центер---*/
 #center {
-    margin-top: 50px;
+   background: @white;
 }
-/*---Меню---*/
-#menu_left {
-    background: fade(@black,40%);
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0px;
-    z-index: 200;
-    cursor: auto;
-    .menu-content {
-         margin: 0 auto;
-         overflow: hidden;
-         height: 100%;
-        .wrapper_mix();
-        .menu-left-rel {
-            background: #bdbdbd ;
-            color: @white;
-            margin-top: 50px;
-            width: 260px;
-            position: relative;
-            left: -270px;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-            height: 100%;
-            .panel-header-menu,.panel-footer-menu {
-                 height: 100px;
-            }
-            .items {
-                margin: 0px;
-                .item {
-                  display: block;
-                  font-size: 16px;
-                  padding: 10px 5px;
-                    &:hover {
-                      background: @reg2;
-                    }
-                }
-            }
-        }
-    }
+/*---Меню нижней---*/
+div.menu_bottom {
+   background: #252525;
+   border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+   width: 100%;
+   margin: 5px 0px;
+   position: relative;
+   div.item a {
+      color: @white;
+   }
+   .search_header {
+     background: @white;
+     position: relative;
+     top: 9px;
+     left: -10px;
+     input.search_input{
+       //position: relative;
+       border-radius: 3px;
+       -moz-border-radius: 3px;
+       -webkit-border-radius: 3px;
+       padding: 5px 0px 5px 5px;
+       position: absolute;
+       right: 27px;
+       top: 4px;
+       display: none;
+       &:hover{
+          border: 1px solid @reg1;
+       }
+     }
+     input.button {
+       height: 27px;
+       position: absolute;
+       right: 0px;
+       top:6px;
+       border:none;
+     }
+   }
 }
 /*---Подвал---*/
 #footer {
   width: 100%;
-  height: 50px;
-
-  background: @black;
-  .copyright {
-      color: @white;
-      display: block;
-      font-size: 11px;
-      padding: 30px 0 0;
+  display: table-row;
+  div.desktop {
+      div.items {
+        padding: 35px 23px;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -ms-flexbox;
+        -ms-flex-pack: center;
+         img.zti {
+            display: block;
+            float: left;
+            width: 224px;
+         }
+         div.block {
+            float: left;
+            padding: 40px 0px 0px 42px;
+            width: 440px;
+            position: relative;
+           .style {
+              left: 40px;
+              position: absolute;
+              top: 0;
+              a.row img {
+                 width: 125px;
+              }
+            }
+            div.name {
+              color: @white;
+              font-size: 20px;
+              font-style: italic;
+              font-weight: bold;
+              line-height: 25px;
+              text-transform: uppercase;
+            }
+            div.list {
+              color: @reg1;
+              font-size: 16px;
+              font-style: italic;
+              font-weight: bold;
+              margin: 12px 0px 16px
+            }
+         }
+         div.contacts {
+           float: left;
+           padding: 45px 0px 0px 33px;
+           div.des {
+             margin: 10px 0px 32px;
+             font-style: italic;
+           }
+         }
+      }
+      table.contact {
+        padding: 20px 0px;
+        width: 100%;
+        border-bottom: 1px dotted @grey1;
+        border-top: 1px dotted @grey1;
+        border-collapse: unset;
+        tr td {
+          vertical-align: top;
+        }
+        div.item {
+          color: @grey;
+          b {
+            display: block;
+            margin: 5px 0px 0px;
+          }
+        }
+        a.gray {
+          color: #a1a0a0;
+          font-style: italic;
+          font-weight: bold;
+          line-height: 22px;
+          border-bottom: 1px dotted @grey1;
+          &:hover {
+              border: none;
+              text-decoration: none;
+          }
+        }
+        .metro {
+          color: @reg;
+          font-weight: bold;
+          margin: 0px 5px 0px 0px;
+        }
+        div.m {
+          color: @grey;
+          font-size: 11px;
+          padding: 5px 0 0;
+        }
+      }
+      div.copyright {
+        padding: 15px 0px;
+        color: #d7d7d7;
+        a {
+          margin: 0px 0px 0px 10px;
+        }
+        span.mob {
+          display: block;
+          float: right;
+          margin: 0px 10px 0px 0px;
+        }
+      }
+  }
+  div.mobile{
+      background: @black;
   }
 }
 
-
 /*Главное страница*/
 .main {
-   color: @white;
+  color: @white;
   .title_mix();
-   // Форма войти;
-   .form1__com,.news{
-       margin: 0px -15px;
-       padding: 10px 15px;
-       background: fade(@grey,20%);
-   }
-   // Новости;
-   .news {
-       background: fade(@black,40%);
-   }
+  // Форма войти;
+  .form1__com,.news{
+     margin: 0px -15px;
+     padding: 10px 15px;
+     background: fade(@grey,20%);
+  }
+  // Новости;
+  .news {
+     background: fade(@black,40%);
+  }
 }
 
 // Поключаем ЛК ;

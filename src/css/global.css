@@ -1,11 +1,14 @@
+/*Анимерованый бутерброд*/
 /*--Базовый стиль--*/
 textarea {
   resize: none;
 }
-.hidden_r {
+.hidden_r,
+.mobile {
   display: none;
 }
-.show_d {
+.show_d,
+.desktop {
   display: block;
 }
 .show_r {
@@ -30,11 +33,23 @@ img.ad {
   font-size: 0px;
   clear: both;
 }
+input,
+textarea,
+select {
+  border: 1px solid #d5d5d5;
+  color: #434343;
+  font-family: Arial;
+  font-size: 13px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
 /*---Сылки---*/
 .no_border {
   color: inherit;
-  text-decoration: none;
-  border: none;
+  text-decoration: none !important;
+  border: none !important;
 }
 .no_border:hover,
 .no_border:focus,
@@ -42,87 +57,6 @@ img.ad {
   text-decoration: none;
   color: inherit;
   border: none;
-}
-/*Анимерованый бутерброд*/
-.menu-qml {
-  position: relative;
-  overflow: hidden;
-  width: 32px;
-  height: 25px;
-  font-size: 0px;
-  cursor: pointer;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-  top: 3px;
-}
-.menu-qml:focus {
-  outline: none;
-}
-.menu-qml span {
-  display: block;
-  position: absolute;
-  top: 10px;
-  left: 2px;
-  right: 2px;
-  height: 3px;
-  background: #fff;
-  border-radius: 1px;
-}
-.menu-qml span::before,
-.menu-qml span::after {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  content: "";
-  border-radius: 1px;
-}
-.menu-qml span::before {
-  top: -8px;
-}
-.menu-qml span::after {
-  bottom: -8px;
-}
-.menu-qml-icon span {
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-}
-.menu-qml-icon span::before {
-  -webkit-transform-origin: top right;
-  -ms-transform-origin: top right;
-  transform-origin: top right;
-  -webkit-transition: -webkit-transform 0.3s, width 0.3s, top 0.3s;
-  transition: transform 0.3s, width 0.3s, top 0.3s;
-}
-.menu-qml-icon span::after {
-  -webkit-transform-origin: bottom right;
-  -ms-transform-origin: bottom right;
-  transform-origin: bottom right;
-  -webkit-transition: -webkit-transform 0.3s, width 0.3s, bottom 0.3s;
-  transition: transform 0.3s, width 0.3s, bottom 0.3s;
-}
-.menu-qml-icon.active span {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.menu-qml-icon.active span::before,
-.menu-qml-icon.active span::after {
-  width: 50%;
-}
-.menu-qml-icon.active span::before {
-  top: 0;
-  -webkit-transform: translateX(13px) translateY(0px) rotate(45deg);
-  -ms-transform: translateX(13px) translateY(0px) rotate(45deg);
-  transform: translateX(13px) translateY(0px) rotate(45deg);
-}
-.menu-qml-icon.active span::after {
-  bottom: 0;
-  -webkit-transform: translateX(13px) translateY(0px) rotate(-45deg);
-  -ms-transform: translateX(13px) translateY(0px) rotate(-45deg);
-  transform: translateX(13px) translateY(0px) rotate(-45deg);
 }
 /*-------------Компонененты-------------*/
 /*Фомра 1*/
@@ -222,35 +156,35 @@ input.placeholder-right:focus:-ms-input-placeholder {
   transition: text-indent 0.3s ease;
 }
 /* плавное изменение прозрачности  placeholder-а при фокусе */
-.placeholder::-webkit-input-placeholder {
+input.placeholder::-webkit-input-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
-.placeholder::-moz-placeholder {
+input.placeholder::-moz-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
-.placeholder:-moz-placeholder {
+input.placeholder:-moz-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
-.placeholder:-ms-input-placeholder {
+input.placeholder:-ms-input-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
-.placeholder:focus::-webkit-input-placeholder {
+input.placeholder:focus::-webkit-input-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.placeholder:focus::-moz-placeholder {
+input.placeholder:focus::-moz-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.placeholder:focus:-moz-placeholder {
+input.placeholder:focus:-moz-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.placeholder:focus:-ms-input-placeholder {
+input.placeholder:focus:-ms-input-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -280,4 +214,114 @@ input.placeholder-right:focus:-ms-input-placeholder {
 .br-content hr {
   margin: 5px 0 3px;
   border-color: rgba(113, 113, 113, 0.4);
+}
+/*Набор Иконки*/
+/*---Социал---*/
+.icon-vk {
+  background: url("../images/desktop/icon-vk.png") no-repeat;
+  height: 25px;
+  width: 41px;
+}
+.icon-tw {
+  background: url("../images/desktop/icon-tw.png") no-repeat;
+  height: 25px;
+  width: 40px;
+}
+.icon-yt {
+  background: url("../images/desktop/icon-yt.png") no-repeat;
+  height: 25px;
+  width: 40px;
+}
+.icon-it {
+  background: url("../images/desktop/icon-it.png") no-repeat;
+  height: 25px;
+  width: 40px;
+}
+/*Набор икон header*/
+.icon-aut {
+  background: url("../images/desktop/icon-aut.png") no-repeat;
+  display: inline-block;
+  height: 22px;
+  vertical-align: top;
+  width: 30px;
+}
+.icon-usercard {
+  background: url("../images/desktop/entrance.png") no-repeat;
+  display: inline-block;
+  height: 22px;
+  vertical-align: top;
+  width: 30px;
+}
+.icon-reg {
+  background: url("../images/desktop/icon-reg.png") no-repeat;
+  display: inline-block;
+  height: 20px;
+  vertical-align: top;
+  width: 40px;
+}
+.icon-right-tab {
+  background: url("../images/desktop/icon-right-tab.png") no-repeat;
+  height: 40px;
+  width: 40px;
+}
+.icon-ab {
+  background: url("../images/desktop/icon-ab.png") no-repeat;
+  height: 40px;
+}
+.icon-ab a {
+  background-position: 0 -40px;
+}
+.icon-ab b {
+  background-position: 0 -80px;
+  height: 50px;
+}
+.icon-right-ab {
+  background: url("../images/desktop/icon-right-ab.png") no-repeat;
+  height: 40px;
+  width: 40px;
+}
+.icon-plus {
+  background: url("../images/desktop/icon-plus.png") no-repeat;
+  height: 24px;
+  width: 24px;
+}
+.icon-right-goods {
+  background: url("../images/desktop/icon-right-goods.png") no-repeat;
+  height: 40px;
+  width: 40px;
+}
+.icon-border {
+  background: url("../images/desktop/border.png") no-repeat scroll center center;
+  display: inline-block;
+  height: 6px;
+  vertical-align: middle;
+  width: 20px;
+}
+.icon-prev {
+  background: url("../images/desktop/icon-prev.png") no-repeat;
+  display: inline-block;
+  height: 14px;
+  left: 10px;
+  position: relative;
+  vertical-align: sub;
+  width: 8px;
+}
+/*Цвета фон*/
+.primary-com {
+  background-color: #428bca;
+}
+.success-com {
+  background-color: #5cb85c;
+}
+.info-com {
+  background-color: #5bc0de;
+}
+.warning-com {
+  background-color: #f0ad4e;
+}
+.danger-com {
+  background-color: #d9534f;
+}
+.default-com {
+  background-color: #999;
 }

@@ -31,8 +31,8 @@
            font-size: @size;
         }
         &:hover {
-          background: lighten(@color, @option);
-          color: @white;
+           background: lighten(@color, @option);
+           color: @white;
         }
      }
 }
@@ -55,7 +55,7 @@
 }
 .wrapper_mix() {
    min-width: 320px;
-   max-width: 740px;
+   max-width: 1042px;
    margin: 0 auto;
 }
 .width-fn(@w:100%; @min-w: auto; @max-w: auto;) {
@@ -70,4 +70,90 @@
       text-transform: uppercase;
       padding: @padding;
     }
+}
+
+/*Анимерованый бутерброд*/
+.menu_qml(){
+  .menu-qml {
+    position: relative;
+    overflow: hidden;
+    width: 32px;
+    height: 25px;
+    font-size: 0px;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    top:3px;
+  }
+  .menu-qml:focus {
+    outline: none;
+  }
+  .menu-qml span {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    right: 2px;
+    height: 3px;
+    background: @white;
+    border-radius: 1px;
+  }
+  .menu-qml span::before,
+  .menu-qml span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: @white;
+    content: "";
+    border-radius: 1px;
+  }
+  .menu-qml span::before {
+    top: -8px;
+  }
+  .menu-qml span::after {
+    bottom: -8px;
+  }
+  .menu-qml-icon span {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+  }
+  .menu-qml-icon span::before {
+    -webkit-transform-origin: top right;
+    -ms-transform-origin: top right;
+    transform-origin: top right;
+    -webkit-transition: -webkit-transform 0.3s, width 0.3s, top 0.3s;
+    transition: transform 0.3s, width 0.3s, top 0.3s;
+  }
+  .menu-qml-icon span::after {
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.3s, width 0.3s, bottom 0.3s;
+    transition: transform 0.3s, width 0.3s, bottom 0.3s;
+  }
+  .menu-qml-icon.active span {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .menu-qml-icon.active span::before,
+  .menu-qml-icon.active span::after {
+    width: 50%;
+  }
+  .menu-qml-icon.active span::before {
+    top: 0;
+    -webkit-transform: translateX(13px) translateY(0px) rotate(45deg);
+    -ms-transform: translateX(13px) translateY(0px) rotate(45deg);
+    transform: translateX(13px) translateY(0px) rotate(45deg);
+
+  }
+  .menu-qml-icon.active span::after {
+    bottom: 0;
+    -webkit-transform: translateX(13px) translateY(0px) rotate(-45deg);
+    -ms-transform: translateX(13px) translateY(0px) rotate(-45deg);
+    transform: translateX(13px) translateY(0px) rotate(-45deg);
+  }
+
 }

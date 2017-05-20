@@ -1,42 +1,50 @@
 
 // Меню раздвижной;
-(function ($) {
+$(document).ready(function(){
     // Настройка;
     var content = $('#menu_left'),
         _body = $('body'),
-        noScroll = $('_menu_o'),
+        noScroll = '_menu_o',
+        push = $('.menu-left-rel'),
         menuBtn = $('.js-left-menu'), // Вешаем события клика;
-        menuSpeed = 200;// Задержка в мл сек.
+        menuSpeed = 350;// Задержка в мл сек.
 
     // Установка запрет скролл;
     function toggleBody(){
-            if( _body.hasClass(noScroll) ){
-                _body.addClass(noScroll);
-                animationMenu(true);
-                console.log('body -- Open');
-            }else{
-                _body.removeClass(noScroll);
-                animationMenu(false);
-                console.log('body -- Close');
-            }
+        if( _body.hasClass(noScroll) ){
+            _body.removeClass(noScroll);
+            animationMenu(false);
+
+        }else{
+            _body.addClass(noScroll);
+            animationMenu(true);
+
+        }
     }
     // Открыть слайд;
     function animationMenu(item){
         if(item){
             push.animate({left: "0px"}, menuSpeed);
-            console.log('Anim -- Open');
+            content.show();
         }else{
-            body.removeClass(pushyOpenRight);
-            push.animate({right: "0px"}, menuSpeed);
-            console.log('Anim --close');
+            push.animate({
+                    left: "-270px"
+                },
+                {
+                    duration:  menuSpeed,
+                    done: function() {
+                        content.hide();
+                    },
+                }
+            );
+
         }
     }
     // События;
     menuBtn.on('click', function(){
         toggleBody();
-        console.log('on');
-        alert('A');
+        $(this).toggleClass('active');
     });
-
-}(jQuery));
+});
 console.log('mobila-- Ok');
+console.log('версия jQuery ' + jQuery.fn.jquery);

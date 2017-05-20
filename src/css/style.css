@@ -1,3 +1,4 @@
+/*Анимерованый бутерброд*/
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -48,13 +49,14 @@ body {
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: #000;
-  background: #333333;
+  background-color: #333333;
+  background: url('../images/desktop/bg.jpg') no-repeat fixed 50% 0px transparent;
 }
 .bg {
-  background-color: #000;
-  background-image: url("../images/bg_blur.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  /*
+  background-color: @base_color;
+  background-image: url("@{images_d}bg.jpg");
+  background-repeat: no-repeat;*/
   bottom: 0;
   height: 100%;
   left: 0;
@@ -66,9 +68,6 @@ body {
   max-width: 740px;
   margin: 0 auto;
   z-index: -1;
-}
-.bg .bg_blur {
-  background-image: url("../images/bg.png");
 }
 ._menu_o {
   overflow: hidden;
@@ -91,58 +90,104 @@ h6 {
 a:focus {
   outline: none;
 }
+a.white-normal {
+  color: #fff;
+  text-decoration: none;
+}
+a.white-normal:hover {
+  color: #E25D57;
+}
+a.black-normal {
+  color: #000000;
+  text-decoration: none;
+}
+a.black-normal:hover {
+  border-bottom: #000000 1px solid;
+}
+a.red-normal {
+  color: #d40d05;
+  text-decoration: none;
+}
+a.red-normal:hover {
+  border-bottom: #d40d05 1px solid;
+}
+a.red {
+  color: #E25D57;
+  border-bottom: #E25D57 1px dotted;
+  text-decoration: none;
+}
+a.red:hover {
+  border: medium none;
+}
 .wrapper {
   display: table;
   width: 100%;
   min-width: 320px;
-  max-width: 740px;
+  max-width: 1042px;
   margin: 0 auto;
-}
-#footer {
-  display: table-row;
 }
 /*---Шапка---*/
 #header {
   width: 100%;
-  height: 50px;
-  background: #000;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 300;
-  min-width: 320px;
-  max-width: 740px;
-  margin: 0 auto;
-  /*--Сетка xs-4 мод padding 5px --*/
+  height: 130px;
+  background: #161616;
 }
-#header .container-fluid {
-  padding-top: 11px;
-  padding-bottom: 11px;
-}
-#header .col-mod {
-  position: relative;
-  float: left;
-  width: 33.33333333%;
-  min-height: 1px;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-#header div.logo {
-  text-align: center;
-}
-#header div.logo img {
-  width: 155px;
-}
-#header div.login-header {
-  height: 20px;
-  text-align: right;
-  margin: 0 0 0 auto;
-  width: 40px;
-}
-#header div.login-header span {
+#header .container-fluid.desktop {
   color: #fff;
-  font-size: 25px;
+}
+#header .container-fluid.desktop .border-right::after {
+  border-right: 1px dotted #747474;
+  content: "";
+  height: 80px;
+  position: absolute;
+  right: -22px;
+  top: 0;
+}
+#header .container-fluid.desktop .social {
+  margin: 12px 20px 0 0;
+  text-align: right;
+}
+#header .container-fluid.desktop .social a {
+  display: inline-block;
+}
+#header .container-fluid.desktop .client {
+  position: relative;
+  margin: 24px 30px;
+  padding-top: 7px;
+}
+#header .container-fluid.desktop .client .badge {
+  position: absolute;
+  font-size: 11px;
+  padding: 3px 5px;
+  top: 0;
+  left: -2px;
+}
+#header .container-fluid.desktop .client .balans {
+  padding: 3px 0px 3px 30px;
+}
+#header .container-fluid.desktop .client a {
+  padding-left: 30px;
+}
+#header .container-fluid.desktop .client span {
+  text-transform: uppercase;
+  font-size: 12px;
+  white-space: pre;
+  vertical-align: top;
+}
+#header .container-fluid.desktop .client .red {
+  margin-left: -3px;
+  padding-left: 34px;
+}
+#header .container-fluid.desktop .client .aut {
+  height: 48px;
+}
+#header .container-fluid.desktop .contacts {
+  margin: 6px 0px;
+}
+#header .container-fluid.desktop .logo-service {
+  margin: 6px 0px;
+  padding-top: 7px;
+  text-align: right;
 }
 #header:before,
 #header:after {
@@ -159,66 +204,215 @@ a:focus {
 }
 #header:after {
   clear: both;
+}
+#menu_left .desktop {
+  height: 100%;
+  background: #EBEBEB;
+  border-radius: 5px 5px 0px 0px;
+}
+#menu_left .desktop div.item,
+div.menu_bottom div.item {
+  padding: 20px 0px 20px 23px;
+  float: left;
+  position: relative;
+}
+#menu_left .desktop div.item a,
+div.menu_bottom div.item a {
+  color: #0C0C0C;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#menu_left .desktop div.item a:hover,
+div.menu_bottom div.item a:hover,
+#menu_left .desktop div.item a.open,
+div.menu_bottom div.item a.open {
+  color: #d40d05;
+}
+#header .contacts div.phone,
+#footer .contacts div.phone {
+  color: #fff;
+  font-size: 31px;
+  font-weight: bold;
+  font-style: italic;
+}
+#header .contacts span.reg,
+#footer .contacts span.reg {
+  color: #E25D57;
+  text-transform: none;
+}
+#header .contacts span.time,
+#footer .contacts span.time {
+  font-size: 10px;
+  margin: 0px 0px 0px 2px;
+  vertical-align: super;
+}
+#header .contacts div.des,
+#footer .contacts div.des {
+  margin: 9px 0px 0px 0px;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+#header .contacts table.contact span.grey,
+#footer .contacts table.contact span.grey {
+  border-bottom: 1px dotted #CBCBCB;
+  color: #a1a0a0;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 22px;
 }
 /*---Центер---*/
 #center {
-  margin-top: 50px;
+  background: #fff;
 }
-/*---Меню---*/
-#menu_left {
-  background: rgba(0, 0, 0, 0.4);
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0px;
-  z-index: 200;
-  cursor: auto;
-}
-#menu_left .menu-content {
-  overflow: hidden;
-  height: 100%;
-  min-width: 320px;
-  max-width: 740px;
-  margin: 0 auto;
-}
-#menu_left .menu-content .menu-left-rel {
-  background: #bdbdbd ;
-  color: #fff;
-  margin-top: 50px;
-  width: 260px;
+/*---Меню нижней---*/
+div.menu_bottom {
+  background: #252525;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  width: 100%;
+  margin: 5px 0px;
   position: relative;
-  left: -270px;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  height: 100%;
 }
-#menu_left .menu-content .menu-left-rel .panel-header-menu,
-#menu_left .menu-content .menu-left-rel .panel-footer-menu {
-  height: 100px;
+div.menu_bottom div.item a {
+  color: #fff;
 }
-#menu_left .menu-content .menu-left-rel .items {
-  margin: 0px;
+div.menu_bottom .search_header {
+  background: #fff;
+  position: relative;
+  top: 9px;
+  left: -10px;
 }
-#menu_left .menu-content .menu-left-rel .items .item {
-  display: block;
-  font-size: 16px;
-  padding: 10px 5px;
+div.menu_bottom .search_header input.search_input {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  padding: 5px 0px 5px 5px;
+  position: absolute;
+  right: 27px;
+  top: 4px;
+  display: none;
 }
-#menu_left .menu-content .menu-left-rel .items .item:hover {
-  background: #C81A18;
+div.menu_bottom .search_header input.search_input:hover {
+  border: 1px solid #E25D57;
+}
+div.menu_bottom .search_header input.button {
+  height: 27px;
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  border: none;
 }
 /*---Подвал---*/
 #footer {
   width: 100%;
-  height: 50px;
-  background: #000;
+  display: table-row;
 }
-#footer .copyright {
-  color: #fff;
+#footer div.desktop div.items {
+  padding: 35px 23px;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+}
+#footer div.desktop div.items img.zti {
   display: block;
+  float: left;
+  width: 224px;
+}
+#footer div.desktop div.items div.block {
+  float: left;
+  padding: 40px 0px 0px 42px;
+  width: 440px;
+  position: relative;
+}
+#footer div.desktop div.items div.block .style {
+  left: 40px;
+  position: absolute;
+  top: 0;
+}
+#footer div.desktop div.items div.block .style a.row img {
+  width: 125px;
+}
+#footer div.desktop div.items div.block div.name {
+  color: #fff;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+#footer div.desktop div.items div.block div.list {
+  color: #E25D57;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 12px 0px 16px;
+}
+#footer div.desktop div.items div.contacts {
+  float: left;
+  padding: 45px 0px 0px 33px;
+}
+#footer div.desktop div.items div.contacts div.des {
+  margin: 10px 0px 32px;
+  font-style: italic;
+}
+#footer div.desktop table.contact {
+  padding: 20px 0px;
+  width: 100%;
+  border-bottom: 1px dotted #747474;
+  border-top: 1px dotted #747474;
+  border-collapse: unset;
+}
+#footer div.desktop table.contact tr td {
+  vertical-align: top;
+}
+#footer div.desktop table.contact div.item {
+  color: #CBCBCB;
+}
+#footer div.desktop table.contact div.item b {
+  display: block;
+  margin: 5px 0px 0px;
+}
+#footer div.desktop table.contact a.gray {
+  color: #a1a0a0;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 22px;
+  border-bottom: 1px dotted #747474;
+}
+#footer div.desktop table.contact a.gray:hover {
+  border: none;
+  text-decoration: none;
+}
+#footer div.desktop table.contact .metro {
+  color: #d40d05;
+  font-weight: bold;
+  margin: 0px 5px 0px 0px;
+}
+#footer div.desktop table.contact div.m {
+  color: #CBCBCB;
   font-size: 11px;
-  padding: 30px 0 0;
+  padding: 5px 0 0;
+}
+#footer div.desktop div.copyright {
+  padding: 15px 0px;
+  color: #d7d7d7;
+}
+#footer div.desktop div.copyright a {
+  margin: 0px 0px 0px 10px;
+}
+#footer div.desktop div.copyright span.mob {
+  display: block;
+  float: right;
+  margin: 0px 10px 0px 0px;
+}
+#footer div.mobile {
+  background: #000;
 }
 /*Главное страница*/
 .main {
@@ -402,6 +596,7 @@ a:focus {
   margin-top: 20px;
   margin-bottom: 20px;
   display: table;
+  width: 100%;
 }
 .my .block-menu .col-xs-6 {
   padding-left: 5px;
