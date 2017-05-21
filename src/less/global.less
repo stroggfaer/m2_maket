@@ -6,6 +6,22 @@
 @import "_mix.less";
 
 /*--Базовый стиль--*/
+//
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
 textarea {
   resize: none;
 }
@@ -58,7 +74,39 @@ input, textarea, select {
     border: none;
   }
 }
-
+// Белый;
+a.white-normal {
+  color: @white;
+  text-decoration: none;
+  &:hover {
+    color: @reg1;
+  }
+}
+// Черный
+a.black-normal {
+  color: #000000;
+  text-decoration: none;
+}
+a.black-normal:hover {
+  border-bottom: #000000 1px solid;
+}
+// Красный свет.
+a.red-normal {
+  color: @reg;
+  text-decoration: none;
+}
+a.red-normal:hover {
+  border-bottom: @reg 1px solid;
+}
+// Красный тем.
+a.red {
+  color: @reg1;
+  border-bottom: @reg1 1px dotted;
+  text-decoration: none;
+}
+a.red:hover {
+  border: medium none;
+}
 /*-------------Компонененты-------------*/
 
 /*Фомра 1*/

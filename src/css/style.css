@@ -49,14 +49,10 @@ body {
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: #000;
-  background-color: #333333;
-  background: url('../images/desktop/bg.jpg') no-repeat fixed 50% 0px transparent;
+  background-color: #161616 ;
 }
 .bg {
-  /*
-  background-color: @base_color;
-  background-image: url("@{images_d}bg.jpg");
-  background-repeat: no-repeat;*/
+  background: url('../images/m/man.jpg') no-repeat fixed 50% 0px transparent;
   bottom: 0;
   height: 100%;
   left: 0;
@@ -71,53 +67,6 @@ body {
 }
 ._menu_o {
   overflow: hidden;
-}
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0px;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-a:focus {
-  outline: none;
-}
-a.white-normal {
-  color: #fff;
-  text-decoration: none;
-}
-a.white-normal:hover {
-  color: #E25D57;
-}
-a.black-normal {
-  color: #000000;
-  text-decoration: none;
-}
-a.black-normal:hover {
-  border-bottom: #000000 1px solid;
-}
-a.red-normal {
-  color: #d40d05;
-  text-decoration: none;
-}
-a.red-normal:hover {
-  border-bottom: #d40d05 1px solid;
-}
-a.red {
-  color: #E25D57;
-  border-bottom: #E25D57 1px dotted;
-  text-decoration: none;
-}
-a.red:hover {
-  border: medium none;
 }
 .wrapper {
   display: table;
@@ -234,6 +183,7 @@ div.menu_bottom div.item a.open {
   font-size: 31px;
   font-weight: bold;
   font-style: italic;
+  white-space: pre;
 }
 #header .contacts span.reg,
 #footer .contacts span.reg {
@@ -263,9 +213,6 @@ div.menu_bottom div.item a.open {
   line-height: 22px;
 }
 /*---Центер---*/
-#center {
-  background: #fff;
-}
 /*---Меню нижней---*/
 div.menu_bottom {
   background: #252525;

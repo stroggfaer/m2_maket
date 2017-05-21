@@ -17,14 +17,16 @@ body {
   font-family: Arial, sans-serif;
   font-size: @font-size-14;
   color: @base_color;
-  background-color: lighten(@black,20%);
-  background : url('@{images_d}bg.jpg') no-repeat fixed 50% 0px transparent;
+  background-color: #161616 ;
+ // background-color: lighten(@black,20%);
+ // background : url('@{images_m}bg.png') no-repeat fixed 50% 0px transparent;
 }
 .bg {
-  /*
-  background-color: @base_color;
-  background-image: url("@{images_d}bg.jpg");
-  background-repeat: no-repeat;*/
+
+  //background-color: @base_color;
+  //background-image: url("@{images_d}bg.jpg");
+ // background-repeat: no-repeat;
+  background : url('@{images_m}man.jpg') no-repeat fixed 50% 0px transparent;
   bottom: 0;
   height: 100%;
   left: 0;
@@ -44,54 +46,6 @@ body {
 // Запрет скроллит;
 ._menu_o {
   overflow: hidden;
-}
-//
-ul, ol {
-  list-style: none;
-  margin: 0;
-  padding: 0px;
-}
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-a {
-  &:focus {
-    outline: none;
-  }
-}
-// Белый;
-a.white-normal {
-   color: @white;
-   text-decoration: none;
-   &:hover {
-      color: @reg1;
-   }
-}
-// Черный
-a.black-normal {
-  color: #000000;
-  text-decoration: none;
-}
-a.black-normal:hover {
-  border-bottom: #000000 1px solid;
-}
-// Красный свет.
-a.red-normal {
-  color: @reg;
-  text-decoration: none;
-}
-a.red-normal:hover {
-  border-bottom: @reg 1px solid;
-}
-// Красный тем.
-a.red {
-  color: @reg1;
-  border-bottom: @reg1 1px dotted;
-  text-decoration: none;
-}
-a.red:hover {
-  border: medium none;
 }
 
 .wrapper {
@@ -198,6 +152,7 @@ a.red:hover {
         font-size: 31px;
         font-weight: bold;
         font-style: italic;
+        white-space: pre;
       }
       span.reg {
         color: @reg1;
@@ -223,10 +178,13 @@ a.red:hover {
           line-height: 22px;
       }
 }
+
 /*---Центер---*/
 #center {
-   background: @white;
+  //background: @white;
+
 }
+
 /*---Меню нижней---*/
 div.menu_bottom {
    background: #252525;
