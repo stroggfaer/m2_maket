@@ -7,11 +7,15 @@
 @import "_mix.less";
 
 .my {
-    color: @white;
+   div{
+     color: @white;
+     font-size: inherit;
+   }
+
     .title_mix();
       // Инфо о клиенте;
       .client-info {
-         padding: 10px 0px;
+         padding: 20px 0px;
         .clearfix();
         .photo-content {
             float: left;
@@ -67,6 +71,7 @@
        }
        .col-mod {
           .make-xs-column(6,0px);
+          .make-md-column(3,0px);
        }
        .balance {
           padding: 8px 0 2px;

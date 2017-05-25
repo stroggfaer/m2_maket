@@ -1,5 +1,16 @@
 /*Анимерованый бутерброд*/
 /* Large devices (large desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  .main .desktop .schedule-tabs div.name {
+    font-size: 12px;
+  }
+  .main .desktop .schedule-tabs div.tab-captions {
+    width: 147px;
+  }
+  .main .desktop .schedule-tabs div.tab-captions div.item a {
+    white-space: normal;
+  }
+}
 /* Medium devices (desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
   .bg {
@@ -202,6 +213,9 @@
     font-size: 11px;
     padding: 30px 0 0;
   }
+  .main .form1__com {
+    width: 100%;
+  }
 }
 /* Small devices (tablets, 768px and up) */
 /* Small devices (mobile, 520px and up) */
@@ -215,5 +229,19 @@
     float: none;
     width: auto;
     vertical-align: top;
+  }
+  .trainer .photo {
+    max-width: none;
+    padding: 5px 0;
+  }
+  .trainer h1.title {
+    display: block;
+  }
+  .trainer .photo,
+  .trainer .block {
+    width: 100%;
+  }
+  .trainer .block h1.title {
+    display: none;
   }
 }

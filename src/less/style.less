@@ -18,14 +18,14 @@ body {
   font-size: @font-size-14;
   color: @base_color;
   background-color: #161616 ;
- // background-color: lighten(@black,20%);
- // background : url('@{images_m}bg.png') no-repeat fixed 50% 0px transparent;
+  // background-color: lighten(@black,20%);
+  // background : url('@{images_m}bg.png') no-repeat fixed 50% 0px transparent;
 }
 .bg {
 
   //background-color: @base_color;
   //background-image: url("@{images_d}bg.jpg");
- // background-repeat: no-repeat;
+  // background-repeat: no-repeat;
   background : url('@{images_m}man.jpg') no-repeat fixed 50% 0px transparent;
   bottom: 0;
   height: 100%;
@@ -39,7 +39,7 @@ body {
   margin: 0 auto;
   z-index: -1;
   .bg_blur {
-     // background-image: url("@{images_m}bg.png");
+    // background-image: url("@{images_m}bg.png");
   }
 }
 
@@ -60,83 +60,84 @@ body {
 
   width: 100%;
   height: 130px;
-  background: @black2;
+  background: fade(@black,40%);
   .container-fluid.desktop {
-      color: @white;
-     .border-right{
-        &::after {
-           border-right: 1px dotted @grey1;
-           content: "";
-           height: 80px;
-           position: absolute;
-           right: -22px;
-           top: 0;
-        }
-     }
-     .social {
-       margin: 12px 20px 0 0;
-       text-align: right;
-       a {
-          display: inline-block;
-       }
-    }
-     .client {
-        position: relative;
-        margin: (@top + 18) 30px;
-        padding-top: 7px;
-        .badge{
-             position: absolute;
-             font-size: @font-size-11;
-             padding: 3px 5px;
-             top: 0;
-             left:  -2px;
-         }
-        .balans {
-           padding: 3px 0px 3px 30px;
-        }
-        a{
-            padding-left: 30px;
-        }
-        span {
-          text-transform: uppercase;
-          font-size: @font-size-12;
-          white-space: pre;
-          vertical-align: top;
-       }
-        .red {
-           margin-left: -3px;
-           padding-left: 34px;
-        }
-        .aut{
-            height: 48px;
-        }
-     }
-     .contacts{
-         margin: @top 0px
+    color: @white;
+    .border-right{
+      &::after {
+        border-right: 1px dotted @grey1;
+        content: "";
+        height: 80px;
+        position: absolute;
+        right: -22px;
+        top: 0;
       }
-     .logo-service {
-        margin: @top 0px;
-        padding-top: 7px;
-        text-align: right;
-     }
+    }
+    .social {
+      margin: 12px 20px 0 0;
+      text-align: right;
+      a {
+        display: inline-block;
+      }
+    }
+    .client {
+      position: relative;
+      margin: (@top + 18) 30px;
+      padding-top: 7px;
+      .badge{
+        position: absolute;
+        font-size: @font-size-11;
+        padding: 3px 5px;
+        top: 0;
+        left:  -2px;
+      }
+      .balans {
+        padding: 3px 0px 3px 30px;
+      }
+      a{
+        padding-left: 30px;
+      }
+      span {
+        text-transform: uppercase;
+        font-size: @font-size-12;
+        white-space: pre;
+        vertical-align: top;
+      }
+      .red {
+        margin-left: -3px;
+        padding-left: 34px;
+      }
+      .aut{
+        height: 48px;
+      }
+    }
+    .contacts{
+      margin: @top 0px
+    }
+    .logo-service {
+      margin: @top 0px;
+      padding-top: 7px;
+      text-align: right;
+    }
   }
   .clearfix();
 
 }
 // Меню основной;
 #menu_left {
-   .desktop{
-       height: 100%;
-       background: #EBEBEB;
-       border-radius: 5px 5px 0px 0px;
-   }
+  .desktop{
+    height: 100%;
+    background: fade(@black,40%);
+    /*border-radius: 5px 5px 0px 0px;*/
+    margin-top: 10px;
+  }
 }
 #menu_left .desktop div.item, div.menu_bottom div.item {
   padding: 20px 0px 20px 23px;
   float: left;
   position: relative;
   a{
-    color: #0C0C0C;
+    color: @white;
     font-weight: bold;
     text-transform: uppercase;
     &:hover,&.open{
@@ -144,214 +145,666 @@ body {
     }
   }
 }
+
 // Контакты;
 #header .contacts,
 #footer .contacts{
-     div.phone {
-        color: @white;
-        font-size: 31px;
-        font-weight: bold;
-        font-style: italic;
-        white-space: pre;
-      }
-      span.reg {
-        color: @reg1;
-        text-transform: none;
-      }
-      span.time {
-         font-size: 10px;
-         margin: 0px 0px 0px 2px;
-         vertical-align: super;
-      }
-      div.des {
-         margin: 9px 0px 0px 0px;
-         color: @white;
-         font-size: 11px;
-         text-transform: uppercase;
-         white-space: nowrap;
-      }
-      table.contact span.grey {
-          border-bottom: 1px dotted @grey;
-          color: #a1a0a0;
-          font-style: italic;
-          font-weight: bold;
-          line-height: 22px;
-      }
+  div.phone {
+    color: @white;
+    font-size: 31px;
+    font-weight: bold;
+    font-style: italic;
+    white-space: pre;
+    line-height: normal;
+  }
+  span.reg {
+    color: @reg1;
+    text-transform: none;
+  }
+  span.time {
+    font-size: 10px;
+    margin: 0px 0px 0px 2px;
+    vertical-align: super;
+  }
+  div.des {
+    margin: 9px 0px 0px 0px;
+    color: @white;
+    font-size: 11px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 230px;
+  }
+  table.contact span.grey {
+    border-bottom: 1px dotted @grey;
+    color: #a1a0a0;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 22px;
+  }
 }
 
 /*---Центер---*/
 #center {
-  //background: @white;
+    //background: @white;
+    .container{
+       @w: 20px;
 
+       &.mod{
+         background: @white;
+         margin-bottom: @w;
+         margin-top: @w;
+         padding-bottom: @w;
+         padding-top: @w;
+         border-radius: 5px;
+       }
+    }
 }
 
 /*---Меню нижней---*/
 div.menu_bottom {
-   background: #252525;
-   border-radius: 5px;
+  background: fade(@black,40%);
+  border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-   width: 100%;
-   margin: 5px 0px;
-   position: relative;
-   div.item a {
-      color: @white;
-   }
-   .search_header {
-     background: @white;
-     position: relative;
-     top: 9px;
-     left: -10px;
-     input.search_input{
-       //position: relative;
-       border-radius: 3px;
-       -moz-border-radius: 3px;
-       -webkit-border-radius: 3px;
-       padding: 5px 0px 5px 5px;
-       position: absolute;
-       right: 27px;
-       top: 4px;
-       display: none;
-       &:hover{
-          border: 1px solid @reg1;
-       }
-     }
-     input.button {
-       height: 27px;
-       position: absolute;
-       right: 0px;
-       top:6px;
-       border:none;
-     }
-   }
+  width: 100%;
+  margin: 5px 0px;
+  position: relative;
+  div.item a {
+    color: @white;
+  }
+  .search_header {
+    background: @white;
+    position: relative;
+    top: 9px;
+    left: -10px;
+    input.search_input{
+      //position: relative;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      padding: 5px 0px 5px 5px;
+      position: absolute;
+      right: 27px;
+      top: 4px;
+      display: none;
+      &:hover{
+        border: 1px solid @reg1;
+      }
+    }
+    input.button {
+      height: 27px;
+      position: absolute;
+      right: 0px;
+      top:6px;
+      border:none;
+    }
+  }
 }
 /*---Подвал---*/
 #footer {
   width: 100%;
   display: table-row;
+  background: @black2;
   div.desktop {
-      div.items {
-        padding: 35px 23px;
-        display: flex;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -ms-flexbox;
-        -ms-flex-pack: center;
-         img.zti {
-            display: block;
-            float: left;
-            width: 224px;
-         }
-         div.block {
-            float: left;
-            padding: 40px 0px 0px 42px;
-            width: 440px;
-            position: relative;
-           .style {
-              left: 40px;
-              position: absolute;
-              top: 0;
-              a.row img {
-                 width: 125px;
-              }
-            }
-            div.name {
-              color: @white;
-              font-size: 20px;
-              font-style: italic;
-              font-weight: bold;
-              line-height: 25px;
-              text-transform: uppercase;
-            }
-            div.list {
-              color: @reg1;
-              font-size: 16px;
-              font-style: italic;
-              font-weight: bold;
-              margin: 12px 0px 16px
-            }
-         }
-         div.contacts {
-           float: left;
-           padding: 45px 0px 0px 33px;
-           div.des {
-             margin: 10px 0px 32px;
-             font-style: italic;
-           }
-         }
+    div.items {
+      padding: 35px 23px;
+      display: flex;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -ms-flexbox;
+      -ms-flex-pack: center;
+      img.zti {
+        display: block;
+        float: left;
+        width: 224px;
       }
-      table.contact {
-        padding: 20px 0px;
-        width: 100%;
-        border-bottom: 1px dotted @grey1;
-        border-top: 1px dotted @grey1;
-        border-collapse: unset;
-        tr td {
-          vertical-align: top;
-        }
-        div.item {
-          color: @grey;
-          b {
-            display: block;
-            margin: 5px 0px 0px;
+      div.block {
+        float: left;
+        padding: 40px 0px 0px 42px;
+        width: 440px;
+        position: relative;
+        .style {
+          left: 40px;
+          position: absolute;
+          top: 0;
+          a.row img {
+            width: 125px;
           }
         }
-        a.gray {
-          color: #a1a0a0;
+        div.name {
+          color: @white;
+          font-size: 20px;
           font-style: italic;
           font-weight: bold;
-          line-height: 22px;
-          border-bottom: 1px dotted @grey1;
-          &:hover {
-              border: none;
-              text-decoration: none;
-          }
+          line-height: 25px;
+          text-transform: uppercase;
         }
-        .metro {
-          color: @reg;
+        div.list {
+          color: @reg1;
+          font-size: 16px;
+          font-style: italic;
           font-weight: bold;
-          margin: 0px 5px 0px 0px;
-        }
-        div.m {
-          color: @grey;
-          font-size: 11px;
-          padding: 5px 0 0;
+          margin: 12px 0px 16px
         }
       }
-      div.copyright {
-        padding: 15px 0px;
-        color: #d7d7d7;
-        a {
-          margin: 0px 0px 0px 10px;
+      div.contacts {
+        float: left;
+        padding: 45px 0px 0px 33px;
+        div.des {
+          margin: 10px 0px 32px;
+          font-style: italic;
         }
-        span.mob {
+      }
+    }
+    table.contact {
+      padding: 20px 0px;
+      width: 100%;
+      border-bottom: 1px dotted @grey1;
+      border-top: 1px dotted @grey1;
+      border-collapse: unset;
+      tr td {
+        vertical-align: top;
+      }
+      div.item {
+        color: @grey;
+        b {
           display: block;
-          float: right;
-          margin: 0px 10px 0px 0px;
+          margin: 5px 0px 0px;
         }
       }
+      a.gray {
+        color: #a1a0a0;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 22px;
+        border-bottom: 1px dotted @grey1;
+        &:hover {
+          border: none;
+          text-decoration: none;
+        }
+      }
+      .metro {
+        color: @reg;
+        font-weight: bold;
+        margin: 0px 5px 0px 0px;
+      }
+      div.m {
+        color: @grey;
+        font-size: 11px;
+        padding: 5px 0 0;
+      }
+    }
+    div.copyright {
+      padding: 15px 0px;
+      color: #d7d7d7;
+      a {
+        margin: 0px 0px 0px 10px;
+      }
+      span.mob {
+        display: block;
+        float: right;
+        margin: 0px 10px 0px 0px;
+      }
+    }
   }
   div.mobile{
-      background: @black;
+    background: @black;
   }
 }
 
 /*Главное страница*/
 .main {
-  color: @white;
-  .title_mix();
-  // Форма войти;
-  .form1__com,.news{
-     margin: 0px -15px;
-     padding: 10px 15px;
-     background: fade(@grey,20%);
+  .desktop {
+    h3.title {
+      font-style: italic;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    /*Слайдер*/
+    div.main-slides div.item img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    div.main-slides .owl-theme .owl-controls .owl-page span {
+      height: 13px;
+      width: 13px;
+    }
+    div.main-slides div.owl-pagination {
+       position: relative;
+       text-align: center;
+       top: 8px;
+    }
+    // Блок;
+    div.block-container {
+      float: left;
+      margin-top: 18px;
+      width: 50%;
+    }
+    /*---Расписания гл---*/
+    .schedule-tabs {
+      margin: 0 0 0 10px;
+      div.tab-container {
+        height: 611px;
+      }
+      div.name {
+        font-size: 14px;
+        font-style: italic;
+        font-weight: bold;
+        padding: 18px 5px;
+        text-transform: uppercase;
+      }
+      div.tab-captions {
+        float: left;
+        background: #EDEDED;
+        padding: 0px 5px;
+        width: 178px;
+        height: 100%;
+        border-radius: 5px 0px 0px 5px;
+        div.item {
+          padding: 13px 10px 7px;
+          position: relative;
+          &.open {
+            background: @white;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            div.icon-sh {
+              background: url("@{images_d}sh.png") no-repeat;
+              height: 25px;
+              position: absolute;
+              right: -11px;
+              top: 15px;
+              width: 12px;
+            }
+          }
+          a {
+            font-size: 12px;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: uppercase;
+            white-space: pre;
+          }
+          div {
+            margin: 2px 0px 0px 0px;
+            span.m {
+              color: @reg;
+              font-weight: bold;
+              margin: 0px 2px 0px 0px;
+            }
+          }
+        }
+      }
+
+    }
+    /*Контент распиание */
+    div.tab-container {
+      div.tab-contents {
+        float: left;
+        width: 68%;
+        background: #252525;
+        height: 100%;
+        border-radius: 0px 5px 5px 0px;
+        -moz-border-radius: 0px 5px 5px 0px;
+        -webkit-border-radius: 0px 5px 5px 0px;
+        div.name {
+          color: @white;
+          padding: 12px 40px 10px 0px;
+          text-align: right;
+        }
+        div.item {
+          padding: 0px 0px 0px 15px;
+          position: relative;
+          display: none;
+          &.open {
+            display: block;
+          }
+
+          div.i {
+            position: relative;
+            clear: both;
+            margin: 0px 0px 25px;
+            div.icon-right-tab {
+              position: absolute;
+              right: 12px;
+              top: 25px;
+              cursor: pointer;
+            }
+            div.trainer {
+              float: left;
+              position: relative;
+              width: 100px;
+              z-index: 1;
+              img {
+                .img_radius();
+              }
+            }
+            .row-i {
+              background: #2e2d2d;
+              left: 22px;
+              padding: 10px 0px;
+              position: relative;
+              top: 8px;
+              width: 94%;
+              div.time {
+                color: @reg1;
+                font-size: 22px;
+                font-style: italic;
+                font-weight: bold;
+              }
+              div.area a.border-white {
+                position: relative;
+                top: 3px;
+                vertical-align: sub;
+                font-style: italic;
+              }
+              div.area a.area {
+                font-size: 14px;
+                font-weight: bold;
+                height: 25px;
+                margin: 3px 0px 0px;
+                width: 283px;
+                display: block;
+                line-height: 14px;
+              }
+            }
+            @media only screen and (max-width: @screen-lg-min) {
+              .row-i{
+                 left: 18px;
+              }
+            }
+          }
+          p {
+            color: @white;
+          }
+        }
+      }
+    }
+
+       /*Новости*/
+       div.main-news {
+      margin: 0px;
+      background: #ededed;
+      padding: 10px 0px 0px 16px;
+      border-radius: 5px 5px 0 0;
+      max-height: 247px;
+      div.row-container {
+        padding: 20px 0px 18px 8px;
+        div.title {
+          color: @reg2;
+          font-size: 15px;
+          font-style: italic;
+          font-weight: bold;
+          margin: 0 0 10px;
+          text-transform: uppercase;
+        }
+
+        div.images {
+          float: left;
+          width: 100px;
+          height: 120px;
+          img {
+            .img_radius(85px; 85px;);
+          }
+        }
+        span.date {
+          color: #4b4b4b;
+          font-size: 13px;
+          padding: 0px 5px 0px 0px;
+        }
+        div.description {
+          color: #1e1e1e;
+          font-size: 14px;
+          line-height: 17px;
+          margin: 0px 0px 0px auto;
+          width: 100%;
+          a.icon-plus {
+            color: @reg2;
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 15px 0 15px 98px;
+            padding: 4px 0px 0px 30px;
+            text-transform: uppercase;
+            width: 50%;
+          }
+        }
+      }
+    }
+
+      /*Фотототчет*/
+      div.main-photo {
+      background: #ededed;
+      margin: -25px 0px 10px;
+      padding: 0px 0px 15px;
+      border-radius: 0px 0px 5px 5px;
+      -moz-border-radius: 0px 0px 5px 5px;
+      -webkit-border-radius: 0px 0px 5px 5px;
+      h3.title {
+        padding: 20px 0px 10px 15px;
+      }
+      div.photo {
+        position: relative;
+        margin: 0px 0px 2px 0px;
+        div.title {
+          bottom: 14px;
+          color: @white;
+          font-size: 20px;
+          font-style: italic;
+          font-weight: bold;
+          left: 10px;
+          line-height: 20px;
+          position: absolute;
+          text-transform: uppercase;
+          width: 200px;
+        }
+      }
+      div.image {
+        height: 354px;
+        overflow: hidden;
+        width: 100%;
+      }
+      img {
+        min-height: 100%;
+        width: 100%;
+      }
+    }
+      /* Апсел Товар */
+      div.main-goods {
+      margin: 3px 0 0;
+      div.row-container {
+        background: #ffffff;
+        border: 3px solid #fc8c0e;
+        border-radius: 5px;
+        padding: 5px 0 2px;
+        position: relative;
+        img {
+          padding: 5px 0 0 10px;
+          vertical-align: middle;
+          width: 188px;
+        }
+        .icon-right-goods {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 8px;
+        }
+        h3.title {
+          color: #187ca9;
+          display: inline;
+          font-size: 16px;
+          margin: 0;
+          position: relative;
+          top: 3px;
+        }
+        a {
+          position: absolute;
+          right: 10px;
+          top: 7px;
+          color: #ffffff;
+          font-style: italic;
+          font-weight: bold;
+        }
+      }
+      div.item {
+        float: left;
+        padding: 15px 25px;
+        width: 25%;
+        div.images {
+          height: 195px;
+          overflow: hidden;
+          width: 100%;
+          img {
+            /*
+            transform: scale(1.2) translate(4px, 25px);
+            -moz-transform: scale(1.2) translate(4px, 25px);
+            -webkit-transform: scale(1.2) translate(4px, 25px);
+            -o-transform: scale(1.2) translate(4px, 25px);
+            -ms-transform: scale(1.2) translate(4px, 25px);*/
+          }
+        }
+        div.title {
+          height: 55px;
+          overflow: hidden;
+          padding: 10px 0px;
+          text-align: center;
+          a {
+            color: #000000;
+            font-size: 17px;
+            font-style: italic;
+            font-weight: bold;
+          }
+        }
+        div.price, div.price-qw {
+          font-size: 24px;
+          font-style: italic;
+          font-weight: bold;
+          text-align: center;
+        }
+        div.price-qw {
+          color: #737373;
+          display: inline;
+          margin: 0px 15px 0px 0px;
+          text-decoration: line-through;
+        }
+        .button {
+          padding: 20px 0px 0px;
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
-  // Новости;
-  .news {
-     background: fade(@black,40%);
+  /*---Мобилка----*/
+  .mobile{
+    color: @white;
+    .title_mix();
+    // Форма войти;
+    .form1__com,.news{
+      margin: 0px -15px;
+      padding: 10px 15px;
+      background: fade(@grey,20%);
+    }
+    .form1__com {
+      width: 320px;
+    }
+    // Новости;
+    .news {
+      background: fade(@black,40%);
+    }
+  }
+
+}
+
+// Направления
+.areas{
+   div.text{
+     padding: 30px 0 20px;
+     color:@grey1;
+   }
+}
+.area{
+   .text_mod();
+}
+
+//Тренеры;
+.trainers {
+
+}
+.trainer {
+  .photo{
+      max-width: 180px;
+  }
+  .block {
+     .btn{
+         margin: 0px;
+     }
+  }
+  .text_mod();
+}
+
+//Клубы;
+.club{
+    @padding:5px;
+   .club-nav{
+       margin: 0px;
+       position: relative;
+       padding: 10px 0;
+       box-shadow: 0px 6px 8px -8px;
+       .btn,.card{
+          position: absolute;
+          right: 0px;
+          top: 8px;
+       }
+       .card{
+         right: 260px;
+         top: -30px;
+       }
+   }
+   .services{
+      padding: @padding;
+      margin: 25px 0 5px;
+   }
+   // Расписание;
+   .schedules{
+      margin-bottom: 30px;
+      margin-top: 15px;
+     .schedules-crossfit{
+        margin-top: 35px;
+     }
+   }
+   .filters{
+     .group_tile{
+         color: @grey1;
+         font-weight: bold;
+      }
+   }
+  .photo-gallery{
+     margin-top: 10px;
+     margin-bottom: 10px;
+   }
+  .footer-clubs{
+     padding: 25px 0;
+     .description{
+       font-size: 16px;
+       font-weight: bold;
+       margin-top: 30px;
+     }
+     a{
+       display: block;
+       margin: 20px 0 0;
+       width: 215px;
+     }
   }
 }
+
+.clubs{
+}
+
+
+
+
 
 // Поключаем ЛК ;
 @import "my.less";

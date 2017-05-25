@@ -18,6 +18,7 @@
       color: @color;
     }
 }
+
 // Кнопка button class . button-mod;
 .button-attr(@color;@w:100%;@padding:10px 0px;@size:16px;@option:10%;) {
     button {
@@ -48,21 +49,33 @@
     div {
       color: @white;
       font-size: 14px;
+      text-align: center;
     }
     &:hover{
 
     }
+}
+// Кнопки бустрапа;
+.btn-color(@bg;@color:@white;){
+  color: @color;
+  background: @bg;
+  &:hover,&.open{
+    background: lighten(@bg, 10%);
+    color: @color;
+  }
 }
 .wrapper_mix() {
    min-width: 320px;
    max-width: 1042px;
    margin: 0 auto;
 }
+
 .width-fn(@w:100%; @min-w: auto; @max-w: auto;) {
   width: @w;
   min-width: @min-w;
   max-width: @max-w;
 }
+
 // Заголовок;
 .title_mix(@padding:15px 0;){
     .title {
@@ -72,6 +85,34 @@
     }
 }
 
+// Округленый картина;
+.img_radius(@w: 100px;@h:100px;){
+    height: @w;
+    width: @h;
+    border-radius: 100%;
+    object-fit: cover;
+}
+// Контент текст;
+.text_mod(@p:10px 0;@f:13px;){
+  .text {
+    padding: @p;
+    font-size: @f;
+    line-height: 20px;
+  }
+}
+
+// центрировать по верстикале текст блок;
+.center-vertical() {
+  .center-vertical {
+    display: table;
+    height: 100%;
+    width: 100%;
+    .cell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
 /*Анимерованый бутерброд*/
 .menu_qml(){
   .menu-qml {

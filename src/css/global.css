@@ -1,10 +1,8 @@
 /*Анимерованый бутерброд*/
 /*--Базовый стиль--*/
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0px;
+ul li,
+ol li {
+  margin-bottom: 3px;
 }
 h1,
 h2,
@@ -56,12 +54,46 @@ textarea,
 select {
   border: 1px solid #d5d5d5;
   color: #434343;
-  font-family: Arial;
   font-size: 13px;
   line-height: 17px;
   margin: 0;
   padding: 0;
   text-align: left;
+}
+table,
+td,
+form,
+div {
+  font-size: 13px;
+  line-height: 17px;
+  color: #434343;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+}
+/*Название загаловок h3*/
+h1.title {
+  font-family: Trebuchet MS;
+}
+h2.title {
+  font-weight: normal;
+}
+h3.title {
+  line-height: 24px;
+  font-weight: normal;
+  font-size: 20px;
+}
+/*Размер*/
+h1 {
+  font-size: 28px;
+}
+h2 {
+  font-size: 18.5px;
+}
+h3 {
+  font-size: 15.5px;
+  font-weight: bold;
+  padding: 5px 0px;
 }
 /*---Сылки---*/
 .no_border {
@@ -104,6 +136,85 @@ a.red {
 }
 a.red:hover {
   border: medium none;
+}
+/*Белый подчерк*/
+a.border-white {
+  color: #ffffff;
+  border-bottom: #888888 1px solid;
+  text-decoration: none;
+}
+a.border-white:hover {
+  border: medium none;
+}
+/*Подчеркивающий (черный цвет)*/
+a.black,
+a.black:link,
+a.black:visited {
+  color: #000;
+  text-decoration: none;
+  border-bottom: #B3B3B3 1px solid;
+}
+a.black:hover,
+a.black:link:hover,
+a.black:visited:hover {
+  color: #D5120D;
+  text-decoration: none;
+  border: none;
+}
+/*Штрих*/
+a.dashed:link,
+a.dashed:visited {
+  color: #1E5584;
+  text-decoration: none;
+  border-bottom: #9FB6CB 1px dashed;
+}
+a.dashed:link:hover,
+a.dashed:visited:hover {
+  color: #C81A18;
+  text-decoration: none;
+  border-bottom: #C81A18 1px dashed;
+}
+/*Точки*/
+a.dotted:link,
+a.dotted:visited {
+  color: #008dbc;
+  text-decoration: none;
+  border-bottom: #7fc6dd 1px dotted;
+}
+a.dotted:link:hover,
+a.dotted:visited:hover,
+a.dotted:link.open,
+a.dotted:visited.open {
+  color: #000;
+  text-decoration: none;
+  border-bottom: #7f7f7f 1px dotted;
+}
+/*Серый*/
+a.silver {
+  border: medium none;
+  color: #747474;
+  text-decoration: none;
+}
+a.silver.reg:hover {
+  color: #d40d05;
+}
+a.silver:hover {
+  color: #8e8e8e;
+}
+/*Синий*/
+a.blue {
+  color: #1E5584;
+  text-decoration: none;
+}
+a.blue:hover {
+  color: #d40d05;
+}
+a.blue.dashed {
+  border-bottom: #B6C8D7 1px solid;
+}
+a.blue.dashed:hover {
+  color: #d40d05;
+  border: none;
 }
 /*-------------Компонененты-------------*/
 /*Фомра 1*/
@@ -167,6 +278,388 @@ a.red:hover {
 }
 .news___com .item .block .date {
   color: #adadad;
+}
+.list__com {
+  margin: 0;
+}
+.list__com .item {
+  margin: 10px 0;
+}
+.list__com .item .title {
+  color: #C81A18;
+  border-bottom: 2px solid #C81A18;
+  font-size: 18px;
+  padding: 5px 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.list__com .block {
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #CBCBCB;
+}
+.list__com .block.mod__img {
+  width: 32%;
+  float: left;
+  border: 1px solid #CBCBCB;
+  border-radius: 3px;
+  margin: 0 10px 10px 0;
+  padding: 5px 8px;
+}
+.list__com .block.mod__img .name,
+.list__com .block.mod__img .photo {
+  vertical-align: middle;
+  display: table-cell;
+  padding-right: 10px;
+}
+@media only screen and (max-width: 992px) {
+  .list__com .block.mod__img {
+    border: none;
+    border-bottom: 1px solid #CBCBCB;
+    float: none;
+    width: 100%;
+  }
+  .list__com .block.mod__img .photo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.list__com .block .name {
+  padding: 5px 0 5px;
+  font-size: 16px;
+}
+.list__com .block .name.left {
+  width: 100%;
+}
+.list__com .block .name span {
+  color: #747474;
+  font-style: italic;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.list__com .block .description {
+  margin: 0;
+  padding: 5px 0;
+}
+.list__com .block .photo {
+  text-align: center;
+  width: 110px;
+}
+.list__com .block .photo img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.list__com .block:before,
+.list__com .block:after {
+  content: " ";
+  display: table;
+}
+.list__com .block:after {
+  clear: both;
+}
+.login__com {
+  font-size: 14px;
+  border: 1px solid #CBCBCB;
+  padding: 20px 15px;
+}
+.random_item__com {
+  border-top: 1px solid #dfdfdf;
+  margin: 0;
+  padding: 10px 0;
+}
+.random_item__com .col-mod {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .random_item__com .col-mod {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .random_item__com .col-mod {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.random_item__com .image {
+  float: left;
+  margin: 0px;
+}
+.random_item__com .image a {
+  display: block;
+  width: 100px;
+}
+.random_item__com .item {
+  float: left;
+  padding: 0 10px;
+  width: 60%;
+}
+.random_item__com .item .name {
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.random_item__com .item .announce {
+  margin: 0px;
+  color: #747474;
+}
+.random_item__com:before,
+.random_item__com:after {
+  content: " ";
+  display: table;
+}
+.random_item__com:after {
+  clear: both;
+}
+.address__com {
+  padding: 35px 25px 40px;
+  width: 100%;
+  background: #FAF2D8;
+}
+.address__com .block {
+  margin-right: 10%;
+  float: left;
+}
+.address__com .block img {
+  position: relative;
+  top: -5px;
+}
+.address__com .img img {
+  width: 120px;
+}
+@media only screen and (max-width: 445px) {
+  .address__com .img img {
+    display: none;
+  }
+}
+.address__com .address {
+  margin: 0;
+}
+.nav__com {
+  padding: 5px;
+  margin: 0px;
+}
+.nav__com li {
+  display: inline-block;
+  margin: 0 0 0 15px;
+}
+.services__com {
+  margin: 5px 0;
+}
+.services__com .group_tile {
+  color: #747474;
+  font-size: 14px;
+  padding: 5px 0;
+}
+.services__com .items {
+  margin: 0 0 10px;
+}
+.services__com .items .item {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 8px;
+}
+.services__com .items .item.active a {
+  border-bottom: 1px solid #E25D57;
+  color: #d40d05;
+  text-decoration: none;
+}
+.services__com .items .item.group {
+  width: auto;
+  margin-right: 20px;
+}
+.command__com {
+  padding: 0px;
+}
+.command__com .group_tile {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+.command__com .item {
+  margin-bottom: 15px;
+}
+.command__com .item img {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.command__com .item a {
+  margin-left: 5px;
+}
+.schedules__table {
+  margin: 10px 0;
+}
+.schedules__table tr td {
+  padding: 0px 5px;
+  vertical-align: top;
+}
+.schedules__table .current {
+  background: #FAF2D8;
+}
+.schedules__table .day {
+  margin: 0;
+  padding: 10px 8px;
+  font-weight: bold;
+}
+.schedules__table td.times {
+  vertical-align: middle;
+}
+.schedules__table td.times .time {
+  margin: 0px;
+  width: 45px;
+  padding: 15px 0px;
+  text-align: center;
+  font-weight: bold;
+  height: 50px;
+}
+.schedules__table .days {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #CBCBCB;
+}
+.schedules__table .days.silver {
+  background: #f1f1f1;
+}
+.schedules__table .days .item {
+  border-bottom: 1px solid #CBCBCB;
+  width: 140px;
+}
+.schedules__table .days .item.open .cell {
+  outline: 1px solid red;
+}
+.schedules__table .days .item .center-vertical {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.schedules__table .days .item .center-vertical .cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.schedules__table .days .item a {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
+.schedules__table .days .item .cell {
+  text-align: center;
+}
+.schedules__table.crossfit td.times .time {
+  width: 105px;
+}
+@media only screen and (max-width: 992px) {
+  .table-responsive {
+    border: none;
+    overflow-y: auto;
+    margin: 0px;
+  }
+  .schedules__table {
+    width: 100%;
+  }
+  .schedules__table tbody,
+  .schedules__table tr.m {
+    display: block;
+    width: 100%;
+  }
+  .schedules__table tbody:before,
+  .schedules__table tr.m:before,
+  .schedules__table tbody:after,
+  .schedules__table tr.m:after {
+    content: " ";
+    display: table;
+  }
+  .schedules__table tbody:after,
+  .schedules__table tr.m:after {
+    clear: both;
+  }
+  .schedules__table .days {
+    display: none;
+  }
+  .schedules__table .days.current {
+    display: table-cell;
+    width: 100%;
+    background: none;
+    border-top-color: #11B342;
+  }
+  .schedules__table .days .item {
+    width: 100%;
+  }
+  .schedules__table .day {
+    display: block;
+    float: left;
+    width: 9%;
+    margin-right: 5%;
+    text-align: center;
+    cursor: pointer;
+  }
+  .schedules__table .day.desktop {
+    display: none;
+  }
+  .schedules__table .day.current {
+    background: none;
+    border-bottom: 2px solid #11B342;
+  }
+}
+.cards__com .item {
+  border: 1px solid #CBCBCB;
+  border-radius: 5px;
+  height: 240px;
+  margin: 0 10px 10px 0;
+  padding: 10px 5px 0;
+  position: relative;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 4px 5px -3px #CBCBCB;
+}
+.cards__com .item.float {
+  float: left;
+}
+.cards__com .item .img {
+  position: relative;
+  margin-bottom: 25px;
+}
+.cards__com .item .img a {
+  display: block;
+  height: 150px;
+  overflow: hidden;
+}
+.cards__com .item .icon {
+  bottom: -25px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+}
+.cards__com .item a {
+  font-size: 16px;
+  font-weight: bold;
+}
+/*-----Настройка плагины-----*/
+div.photo-gallery .item {
+  margin: 3px;
+}
+div.photo-gallery .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+div.photo-gallery .owl-pagination {
+  text-align: center;
 }
 /*----"Эффекты----*/
 /* сдвиг placeholder-а вправо при фокусе*/
@@ -249,9 +742,79 @@ input.placeholder:focus:-ms-input-placeholder {
 .button_op div {
   color: #fff;
   font-size: 14px;
+  text-align: center;
+}
+.button_op.sm-1 {
+  max-width: 200px;
+}
+a.button_orang {
+  background: #FC8C0E;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: #ffffff;
+  display: block;
+  font-style: italic;
+  font-weight: bold;
+  padding: 10px 0px;
+  text-align: center;
+  text-decoration: none;
+  width: 174px;
+}
+a.button_orang:hover {
+  background: #fda440;
+}
+.btn-green {
+  color: #fff;
+  background: #1E8902;
+}
+.btn-green:hover,
+.btn-green.open {
+  background: #29bb03;
+  color: #fff;
+}
+.btn-orang {
+  color: #fff;
+  background: #FC8C0E;
+}
+.btn-orang:hover,
+.btn-orang.open {
+  background: #fda440;
+  color: #fff;
+}
+.btn-reg {
+  color: #fff;
+  background: #C81A18;
+}
+.btn-reg:hover,
+.btn-reg.open {
+  background: #e62f2d;
+  color: #fff;
+}
+.btn-reg {
+  color: #fff;
+  background: #E25D57;
+}
+.btn-reg:hover,
+.btn-reg.open {
+  background: #ea8782;
+  color: #fff;
 }
 .margin-bottom {
   margin-bottom: 5px;
+}
+.metro {
+  padding: 5px 0;
+  font-size: 16px;
+}
+.metro .m {
+  background: #E25D57;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 3px 5px;
+  vertical-align: top;
 }
 .br-content {
   margin: 0 -15px;
@@ -261,6 +824,10 @@ input.placeholder:focus:-ms-input-placeholder {
 .br-content hr {
   margin: 5px 0 3px;
   border-color: rgba(113, 113, 113, 0.4);
+}
+.sm-text {
+  font-size: 11px;
+  color: #747474;
 }
 /*Набор Иконки*/
 /*---Социал---*/
@@ -352,6 +919,29 @@ input.placeholder:focus:-ms-input-placeholder {
   position: relative;
   vertical-align: sub;
   width: 8px;
+}
+.icon-cub {
+  background: url("../images/desktop/cub.png") no-repeat;
+  height: 50px;
+  width: 50px;
+}
+.icon-video {
+  background: url("../images/desktop/main-video.png") no-repeat;
+  height: 50px;
+  width: 50px;
+}
+.icon-video.blue {
+  background: url("../images/desktop/video-icon.png") no-repeat;
+}
+.icon-news {
+  background: url("../images/desktop/main-news.png") no-repeat;
+  height: 50px;
+  width: 50px;
+}
+.icon-photos {
+  background: url("../images/desktop/main-photos.png") no-repeat;
+  height: 50px;
+  width: 50px;
 }
 /*Цвета фон*/
 .primary-com {

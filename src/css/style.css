@@ -79,7 +79,7 @@ body {
 #header {
   width: 100%;
   height: 130px;
-  background: #161616;
+  background: rgba(0, 0, 0, 0.4);
 }
 #header .container-fluid.desktop {
   color: #fff;
@@ -156,8 +156,9 @@ body {
 }
 #menu_left .desktop {
   height: 100%;
-  background: #EBEBEB;
-  border-radius: 5px 5px 0px 0px;
+  background: rgba(0, 0, 0, 0.4);
+  /*border-radius: 5px 5px 0px 0px;*/
+  margin-top: 10px;
 }
 #menu_left .desktop div.item,
 div.menu_bottom div.item {
@@ -167,7 +168,7 @@ div.menu_bottom div.item {
 }
 #menu_left .desktop div.item a,
 div.menu_bottom div.item a {
-  color: #0C0C0C;
+  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -184,6 +185,7 @@ div.menu_bottom div.item a.open {
   font-weight: bold;
   font-style: italic;
   white-space: pre;
+  line-height: normal;
 }
 #header .contacts span.reg,
 #footer .contacts span.reg {
@@ -203,6 +205,7 @@ div.menu_bottom div.item a.open {
   font-size: 11px;
   text-transform: uppercase;
   white-space: nowrap;
+  width: 230px;
 }
 #header .contacts table.contact span.grey,
 #footer .contacts table.contact span.grey {
@@ -213,9 +216,17 @@ div.menu_bottom div.item a.open {
   line-height: 22px;
 }
 /*---Центер---*/
+#center .container.mod {
+  background: #fff;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-radius: 5px;
+}
 /*---Меню нижней---*/
 div.menu_bottom {
-  background: #252525;
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -256,6 +267,7 @@ div.menu_bottom .search_header input.button {
 #footer {
   width: 100%;
   display: table-row;
+  background: #161616;
 }
 #footer div.desktop div.items {
   padding: 35px 23px;
@@ -363,27 +375,442 @@ div.menu_bottom .search_header input.button {
 }
 /*Главное страница*/
 .main {
+  /*---Мобилка----*/
+}
+.main .desktop {
+  /*Слайдер*/
+  /*---Расписания гл---*/
+  /*Контент распиание */
+  /*Новости*/
+  /*Фотототчет*/
+  /* Апсел Товар */
+}
+.main .desktop h3.title {
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.main .desktop div.main-slides div.item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.main .desktop div.main-slides .owl-theme .owl-controls .owl-page span {
+  height: 13px;
+  width: 13px;
+}
+.main .desktop div.main-slides div.owl-pagination {
+  position: relative;
+  text-align: center;
+  top: 8px;
+}
+.main .desktop div.block-container {
+  float: left;
+  margin-top: 18px;
+  width: 50%;
+}
+.main .desktop .schedule-tabs {
+  margin: 0 0 0 10px;
+}
+.main .desktop .schedule-tabs div.tab-container {
+  height: 611px;
+}
+.main .desktop .schedule-tabs div.name {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+  padding: 18px 5px;
+  text-transform: uppercase;
+}
+.main .desktop .schedule-tabs div.tab-captions {
+  float: left;
+  background: #EDEDED;
+  padding: 0px 5px;
+  width: 178px;
+  height: 100%;
+  border-radius: 5px 0px 0px 5px;
+}
+.main .desktop .schedule-tabs div.tab-captions div.item {
+  padding: 13px 10px 7px;
+  position: relative;
+}
+.main .desktop .schedule-tabs div.tab-captions div.item.open {
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.main .desktop .schedule-tabs div.tab-captions div.item.open div.icon-sh {
+  background: url("../images/desktop/sh.png") no-repeat;
+  height: 25px;
+  position: absolute;
+  right: -11px;
+  top: 15px;
+  width: 12px;
+}
+.main .desktop .schedule-tabs div.tab-captions div.item a {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: pre;
+}
+.main .desktop .schedule-tabs div.tab-captions div.item div {
+  margin: 2px 0px 0px 0px;
+}
+.main .desktop .schedule-tabs div.tab-captions div.item div span.m {
+  color: #d40d05;
+  font-weight: bold;
+  margin: 0px 2px 0px 0px;
+}
+.main .desktop div.tab-container div.tab-contents {
+  float: left;
+  width: 68%;
+  background: #252525;
+  height: 100%;
+  border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+}
+.main .desktop div.tab-container div.tab-contents div.name {
+  color: #fff;
+  padding: 12px 40px 10px 0px;
+  text-align: right;
+}
+.main .desktop div.tab-container div.tab-contents div.item {
+  padding: 0px 0px 0px 15px;
+  position: relative;
+  display: none;
+}
+.main .desktop div.tab-container div.tab-contents div.item.open {
+  display: block;
+}
+.main .desktop div.tab-container div.tab-contents div.item div.i {
+  position: relative;
+  clear: both;
+  margin: 0px 0px 25px;
+}
+.main .desktop div.tab-container div.tab-contents div.item div.i div.icon-right-tab {
+  position: absolute;
+  right: 12px;
+  top: 25px;
+  cursor: pointer;
+}
+.main .desktop div.tab-container div.tab-contents div.item div.i div.trainer {
+  float: left;
+  position: relative;
+  width: 100px;
+  z-index: 1;
+}
+.main .desktop div.tab-container div.tab-contents div.item div.i div.trainer img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.main .desktop div.tab-container div.tab-contents div.item div.i .row-i {
+  background: #2e2d2d;
+  left: 22px;
+  padding: 10px 0px;
+  position: relative;
+  top: 8px;
+  width: 94%;
+}
+.main .desktop div.tab-container div.tab-contents div.item div.i .row-i div.time {
+  color: #E25D57;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: bold;
+}
+.main .desktop div.tab-container div.tab-contents div.item div.i .row-i div.area a.border-white {
+  position: relative;
+  top: 3px;
+  vertical-align: sub;
+  font-style: italic;
+}
+.main .desktop div.tab-container div.tab-contents div.item div.i .row-i div.area a.area {
+  font-size: 14px;
+  font-weight: bold;
+  height: 25px;
+  margin: 3px 0px 0px;
+  width: 283px;
+  display: block;
+  line-height: 14px;
+}
+@media only screen and (max-width: 1200px) {
+  .main .desktop div.tab-container div.tab-contents div.item div.i .row-i {
+    left: 18px;
+  }
+}
+.main .desktop div.tab-container div.tab-contents div.item p {
   color: #fff;
 }
-.main .title {
+.main .desktop div.main-news {
+  margin: 0px;
+  background: #ededed;
+  padding: 10px 0px 0px 16px;
+  border-radius: 5px 5px 0 0;
+  max-height: 247px;
+}
+.main .desktop div.main-news div.row-container {
+  padding: 20px 0px 18px 8px;
+}
+.main .desktop div.main-news div.row-container div.title {
+  color: #C81A18;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+.main .desktop div.main-news div.row-container div.images {
+  float: left;
+  width: 100px;
+  height: 120px;
+}
+.main .desktop div.main-news div.row-container div.images img {
+  height: 85px;
+  width: 85px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.main .desktop div.main-news div.row-container span.date {
+  color: #4b4b4b;
+  font-size: 13px;
+  padding: 0px 5px 0px 0px;
+}
+.main .desktop div.main-news div.row-container div.description {
+  color: #1e1e1e;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0px 0px 0px auto;
+  width: 100%;
+}
+.main .desktop div.main-news div.row-container div.description a.icon-plus {
+  color: #C81A18;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 15px 0 15px 98px;
+  padding: 4px 0px 0px 30px;
+  text-transform: uppercase;
+  width: 50%;
+}
+.main .desktop div.main-photo {
+  background: #ededed;
+  margin: -25px 0px 10px;
+  padding: 0px 0px 15px;
+  border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+}
+.main .desktop div.main-photo h3.title {
+  padding: 20px 0px 10px 15px;
+}
+.main .desktop div.main-photo div.photo {
+  position: relative;
+  margin: 0px 0px 2px 0px;
+}
+.main .desktop div.main-photo div.photo div.title {
+  bottom: 14px;
+  color: #fff;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  left: 10px;
+  line-height: 20px;
+  position: absolute;
+  text-transform: uppercase;
+  width: 200px;
+}
+.main .desktop div.main-photo div.image {
+  height: 354px;
+  overflow: hidden;
+  width: 100%;
+}
+.main .desktop div.main-photo img {
+  min-height: 100%;
+  width: 100%;
+}
+.main .desktop div.main-goods {
+  margin: 3px 0 0;
+}
+.main .desktop div.main-goods div.row-container {
+  background: #ffffff;
+  border: 3px solid #fc8c0e;
+  border-radius: 5px;
+  padding: 5px 0 2px;
+  position: relative;
+}
+.main .desktop div.main-goods div.row-container img {
+  padding: 5px 0 0 10px;
+  vertical-align: middle;
+  width: 188px;
+}
+.main .desktop div.main-goods div.row-container .icon-right-goods {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.main .desktop div.main-goods div.row-container h3.title {
+  color: #187ca9;
+  display: inline;
+  font-size: 16px;
+  margin: 0;
+  position: relative;
+  top: 3px;
+}
+.main .desktop div.main-goods div.row-container a {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  color: #ffffff;
+  font-style: italic;
+  font-weight: bold;
+}
+.main .desktop div.main-goods div.item {
+  float: left;
+  padding: 15px 25px;
+  width: 25%;
+}
+.main .desktop div.main-goods div.item div.images {
+  height: 195px;
+  overflow: hidden;
+  width: 100%;
+}
+.main .desktop div.main-goods div.item div.images img {
+  /*
+            transform: scale(1.2) translate(4px, 25px);
+            -moz-transform: scale(1.2) translate(4px, 25px);
+            -webkit-transform: scale(1.2) translate(4px, 25px);
+            -o-transform: scale(1.2) translate(4px, 25px);
+            -ms-transform: scale(1.2) translate(4px, 25px);*/
+}
+.main .desktop div.main-goods div.item div.title {
+  height: 55px;
+  overflow: hidden;
+  padding: 10px 0px;
+  text-align: center;
+}
+.main .desktop div.main-goods div.item div.title a {
+  color: #000000;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: bold;
+}
+.main .desktop div.main-goods div.item div.price,
+.main .desktop div.main-goods div.item div.price-qw {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+.main .desktop div.main-goods div.item div.price-qw {
+  color: #737373;
+  display: inline;
+  margin: 0px 15px 0px 0px;
+  text-decoration: line-through;
+}
+.main .desktop div.main-goods div.item .button {
+  padding: 20px 0px 0px;
+}
+.main .desktop div.main-goods div.item .button a {
+  width: 100%;
+}
+.main .mobile {
+  color: #fff;
+}
+.main .mobile .title {
   font-size: 16px;
   text-transform: uppercase;
   padding: 15px 0;
 }
-.main .form1__com,
-.main .news {
+.main .mobile .form1__com,
+.main .mobile .news {
   margin: 0px -15px;
   padding: 10px 15px;
   background: rgba(203, 203, 203, 0.2);
 }
-.main .news {
+.main .mobile .form1__com {
+  width: 320px;
+}
+.main .mobile .news {
   background: rgba(0, 0, 0, 0.4);
+}
+.areas div.text {
+  padding: 30px 0 20px;
+  color: #747474;
+}
+.area .text {
+  padding: 10px 0;
+  font-size: 13px;
+  line-height: 20px;
+}
+.trainer .photo {
+  max-width: 180px;
+}
+.trainer .block .btn {
+  margin: 0px;
+}
+.trainer .text {
+  padding: 10px 0;
+  font-size: 13px;
+  line-height: 20px;
+}
+.club .club-nav {
+  margin: 0px;
+  position: relative;
+  padding: 10px 0;
+  box-shadow: 0px 6px 8px -8px;
+}
+.club .club-nav .btn,
+.club .club-nav .card {
+  position: absolute;
+  right: 0px;
+  top: 8px;
+}
+.club .club-nav .card {
+  right: 260px;
+  top: -30px;
+}
+.club .services {
+  padding: 5px;
+  margin: 25px 0 5px;
+}
+.club .schedules {
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.club .schedules .schedules-crossfit {
+  margin-top: 35px;
+}
+.club .filters .group_tile {
+  color: #747474;
+  font-weight: bold;
+}
+.club .photo-gallery {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.club .footer-clubs {
+  padding: 25px 0;
+}
+.club .footer-clubs .description {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.club .footer-clubs a {
+  display: block;
+  margin: 20px 0 0;
+  width: 215px;
 }
 /*----Личный кабинет----
  Version 2.0.0
 */
-.my {
+.my div {
   color: #fff;
+  font-size: inherit;
 }
 .my .title {
   font-size: 16px;
@@ -391,7 +818,7 @@ div.menu_bottom .search_header input.button {
   padding: 15px 0;
 }
 .my .client-info {
-  padding: 10px 0px;
+  padding: 20px 0px;
 }
 .my .client-info:before,
 .my .client-info:after {
@@ -459,12 +886,18 @@ div.menu_bottom .search_header input.button {
   padding: 5px 0px;
 }
 .my .widgets .col-mod {
-  position: relative;
   float: left;
   width: 50%;
+  position: relative;
   min-height: 1px;
   padding-left: 0px;
   padding-right: 0px;
+}
+@media (min-width: 992px) {
+  .my .widgets .col-mod {
+    float: left;
+    width: 25%;
+  }
 }
 .my .widgets .balance {
   padding: 8px 0 2px;
@@ -494,6 +927,7 @@ div.menu_bottom .search_header input.button {
 .my .reservations .tab .item div {
   color: #fff;
   font-size: 14px;
+  text-align: center;
 }
 .my .reservations .tab .item.open {
   border-bottom: 2px solid #fff;

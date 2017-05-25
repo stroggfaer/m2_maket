@@ -7,10 +7,8 @@
 
 /*--Базовый стиль--*/
 //
-ul, ol {
-  list-style: none;
-  margin: 0;
-  padding: 0px;
+ul li, ol li {
+  margin-bottom: 3px;
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -54,14 +52,46 @@ img.ad {
   clear: both;
 }
 input, textarea, select {
-   border: 1px solid #d5d5d5;
-   color: #434343;
-   font-family: Arial;
-   font-size: 13px;
-   line-height: 17px;
-   margin: 0;
-   padding: 0;
-   text-align: left;
+  border: 1px solid #d5d5d5;
+  color: #434343;
+  font-size: 13px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+table, td, form, div {
+  font-size: 13px;
+  line-height: 17px;
+  color: #434343;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+}
+/*Название загаловок h3*/
+h1.title {
+  font-family: Trebuchet MS;
+
+}
+h2.title {
+  font-weight: normal;
+}
+h3.title {
+  line-height: 24px;
+  font-weight: normal;
+  font-size: 20px;
+}
+/*Размер*/
+h1 {
+  font-size: 28px;
+}
+h2 {
+  font-size: 18.5px;
+}
+h3 {
+  font-size: 15.5px;
+  font-weight: bold;
+  padding: 5px 0px;
 }
 /*---Сылки---*/
 .no_border {
@@ -103,12 +133,85 @@ a.red {
   color: @reg1;
   border-bottom: @reg1 1px dotted;
   text-decoration: none;
+  &:hover{
+    border: medium none;
+  }
 }
-a.red:hover {
-  border: medium none;
-}
-/*-------------Компонененты-------------*/
 
+/*Белый подчерк*/
+a.border-white {
+  color: #ffffff;
+  border-bottom: #888888 1px solid;
+  text-decoration: none;
+  &:hover{
+    border: medium none;
+  }
+}
+/*Подчеркивающий (черный цвет)*/
+a.black, a.black:link, a.black:visited {
+  color: @black;
+  text-decoration: none;
+  border-bottom: #B3B3B3 1px solid;
+  &:hover{
+     color: #D5120D;
+     text-decoration: none;
+     border: none;
+  }
+}
+
+/*Штрих*/
+a.dashed:link, a.dashed:visited {
+  color: #1E5584;
+  text-decoration: none;
+  border-bottom: #9FB6CB 1px dashed;
+  &:hover{
+     color: @reg2;
+     text-decoration: none;
+     border-bottom: @reg2 1px dashed;
+  }
+}
+
+/*Точки*/
+a.dotted:link, a.dotted:visited {
+  color: #008dbc;
+  text-decoration: none;
+  border-bottom: #7fc6dd 1px dotted;
+  &:hover,&.open{
+    color: @black;
+    text-decoration: none;
+    border-bottom: #7f7f7f 1px dotted;
+  }
+}
+
+/*Серый*/
+a.silver {
+  border: medium none;
+  color: @grey1;
+  text-decoration: none;
+  &.reg:hover{
+    color: @reg;
+  }
+  &:hover{
+    color: lighten(@grey1, 10%);
+  }
+}
+/*Синий*/
+a.blue {
+  color: #1E5584;
+  text-decoration: none;
+  &:hover{
+    color: @reg;
+  }
+  &.dashed{
+     border-bottom: #B6C8D7 1px solid;
+     &:hover{
+        color: @reg;
+        border: none;
+     }
+  }
+}
+
+/*-------------Компонененты-------------*/
 /*Фомра 1*/
 .form1__com {
 
@@ -172,6 +275,364 @@ a.red:hover {
   }
 }
 
+// список напрмер направления,тренеров;
+.list__com {
+    margin: 0;
+    .item{
+        margin: 10px 0;
+        .title{
+           color:@reg2;
+           border-bottom: 2px solid @reg2;
+           font-size: @font-size-18;
+           padding: 5px 0;
+           margin-top: 30px;
+           margin-bottom: 15px;
+        }
+    }
+    .block{
+      margin: 0;
+      padding-bottom: 5px;
+      border-bottom: 1px solid @grey;
+      &.mod__img{
+        width: 32%;
+        float: left;
+        border: 1px solid @grey;
+        border-radius: 3px;
+        margin: 0 10px 10px 0;
+        padding: 5px 8px;
+        .name,.photo{
+           vertical-align: middle;
+           display: table-cell;
+           padding-right: 10px;
+        }
+      }
+      @media only screen and (max-width: @screen-md-min) {
+          &.mod__img{
+              border: none;
+              border-bottom: 1px solid @grey;
+              float: none;
+              width: 100%;
+              .photo {
+                 img {
+                   width: 50px;
+                   height: 50px;
+                 }
+              }
+          }
+      }
+        .name{
+         padding: 5px 0 5px;
+         font-size: @font-size-16;
+         &.left{
+           width: 100%;
+         }
+           span{
+               color:@grey1;
+               font-style: italic;
+               font-size: 12px;
+               margin-left: 5px;
+           }
+       }
+        .description{
+           margin: 0;
+           padding: 5px 0;
+        }
+        .photo{
+          text-align: center;
+          width: 110px;
+           img {
+             .img_radius(100px; 100px);
+           }
+        }
+      .clearfix();
+    }
+}
+
+// Вход или зарегатся;
+.login__com {
+  font-size: @font-size-14;
+  border: 1px solid @grey;
+  padding: 20px 15px;
+}
+//Плитки вывод блоки Напрмер Новиньки,похожие новости и.т.д;
+.random_item__com {
+  border-top: 1px solid @grey + 20;
+  margin: 0;
+  padding: 10px 0;
+   .col-mod {
+      .make-xs-column(12,0px);
+      .make-sm-column(6,0px);
+      .make-md-column(4,0px);
+      margin-bottom: 10px;
+   }
+   .image{
+      float: left;
+      margin: 0px;
+      a{
+          display: block;
+          width: 100px;
+      }
+   }
+  .item {
+    float: left;
+    padding: 0 10px;
+    width: 60%;
+    .name {
+      font-size: @font-size-14;
+      padding-bottom: 5px;
+    }
+    .announce {
+      margin: 0px;
+      color: @grey1;
+    }
+  }
+  .clearfix();
+}
+
+// Адресс клуба;
+.address__com{
+    padding: 35px 25px 40px;
+    width: 100%;
+    background: @orange1;
+    .block{
+        margin-right: 10%;
+        float: left;
+        img{
+          position: relative;
+          top: -5px;
+        }
+    }
+  .img img{
+    width: 120px;
+  }
+  @media only screen and (max-width: 445px) {
+    .img img{
+        display: none;
+    }
+  }
+    .address{
+      margin: 0;
+    }
+}
+
+//Навигация;
+.nav__com{
+   padding: 5px;
+   margin:0px;
+    li {
+       display: inline-block;
+       margin:0 0 0 15px;
+    }
+}
+
+// Сетка ссылки;
+.services__com{
+    margin: 5px 0;
+   .group_tile{
+      color:@grey1;
+      font-size: @font-size-14;
+      padding: 5px 0;
+   }
+   .items{
+     margin: 0 0 10px;
+     .item{
+       &.active{
+         a{
+            border-bottom: 1px solid @reg1;;
+            color: @reg;;
+            text-decoration: none;
+         }
+       }
+       .make-xs-column(3,0px);
+       &.group{
+         width: auto;
+         margin-right: 20px;
+       }
+       margin-bottom: 8px;
+     }
+   }
+}
+
+// Список команда;
+.command__com{
+  padding: 0px;
+  .group_tile{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0px;
+  }
+  .item{
+    margin-bottom: 15px;
+    img{
+      .img_radius(30px; 30px);
+       vertical-align: middle;
+    }
+    a{
+      margin-left: 5px;
+    }
+  }
+}
+
+//Таблица распиание;
+.schedules__table{
+  margin: 10px 0;
+   tr td{
+      padding: 0px 5px;
+      vertical-align: top;
+   }
+  .current{
+     background: @orange1;
+  }
+   .day{
+     margin: 0;
+
+     padding: 10px 8px;
+     font-weight: bold;
+   }
+   td.times {
+       vertical-align: middle;
+       .time {
+         margin: 0px;
+         width: 45px;
+         padding: 15px 0px;
+         text-align: center;
+         font-weight: bold;
+         height: 50px;
+
+       }
+   }
+   .days{
+      margin: 0px;
+      padding: 0px;
+      border: 1px solid @grey;
+      &.silver{
+         background: lighten(@grey, 15%);
+      }
+      .item{
+         border-bottom: 1px solid @grey;
+         width: 140px;
+         &.open{
+            .cell {
+                outline: 1px solid red;
+            }
+         }
+         .center-vertical();
+         a{
+            display: block;
+            text-align: center;
+            font-size: 12px;
+         }
+         .cell{
+            text-align: center;
+         }
+      }
+   }
+   &.crossfit{
+     td.times {
+       .time {
+         width: 105px;
+       }
+     }
+   }
+}
+// Мобильная версия;
+@media only screen and (max-width: @screen-md-min) {
+  .table-responsive {
+      border: none;
+      overflow-y:auto;
+      margin: 0px;
+  }
+  .schedules__table {
+      width: 100%;
+      tbody, tr.m {
+        display: block;
+        width: 100%;
+        .clearfix();
+      }
+      .days {
+        display: none;
+        &.current {
+          display: table-cell;
+          width: 100%;
+          background: none;
+          border-top-color: @green ;
+        }
+        .item {
+          width: 100%;
+        }
+      }
+      .day {
+        &.desktop{
+          display: none;
+        }
+        display: block;
+        float: left;
+        width: 9%;
+        margin-right: 5%;
+        text-align: center;
+        cursor: pointer;
+        &.current{
+            background: none;
+            border-bottom: 2px solid @green ;
+        }
+      }
+  }
+}
+
+//Карточка виджет;
+.cards__com{
+   .item{
+     border: 1px solid @grey;
+     border-radius: 5px;
+     height: 240px;
+     margin: 0 10px 10px 0;
+     padding: 10px 5px 0;
+     position: relative;
+     text-align: center;
+     width: 280px;
+     box-shadow: 0 4px 5px -3px @grey;
+     &.float{
+        float: left;
+     }
+       .img{
+         position: relative;
+         margin-bottom: 25px;
+         a{
+           display: block;
+           height: 150px;
+           overflow: hidden;
+         }
+       }
+       .icon{
+         bottom: -25px;
+         left: 0;
+         margin: 0 auto;
+         position: absolute;
+         right: 0;
+       }
+      a {
+        font-size: 16px;
+        font-weight: bold;
+      }
+   }
+}
+
+/*-----Настройка плагины-----*/
+
+//Карусель;
+div.photo-gallery {
+  .item {
+    margin: 3px;
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .owl-pagination{
+     text-align: center;
+  }
+}
 
 /*----"Эффекты----*/
 /* сдвиг placeholder-а вправо при фокусе*/
@@ -200,9 +661,58 @@ input.placeholder:focus:-ms-input-placeholder      {opacity: 0; transition: opac
 .button_op {
   .button-border();
 }
+// размер 320px;
+.button_op.sm-1 {
+  max-width: 200px;
+}
+// Орпнживый;
+a.button_orang {
+  background: @orange;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: #ffffff;
+  display: block;
+  font-style: italic;
+  font-weight: bold;
+  padding: 10px 0px;
+  text-align: center;
+  text-decoration: none;
+  width: 174px;
+}
+a.button_orang:hover{
+  background: lighten(@orange, 10%);
+}
+// btn цвета для а;
+.btn-green{
+  .btn-color(@green1);
+}
+.btn-orang{
+  .btn-color(@orange);
+}
+.btn-reg{
+  .btn-color(@reg2);
+}
+.btn-reg{
+  .btn-color(@reg1);
+}
 // Хелпер
 .margin-bottom {
   margin-bottom: 5px;
+}
+// Метро
+.metro{
+  padding: 5px 0;
+  font-size: @font-size-16;
+  .m{
+    background: @reg1;
+    border-radius: 100%;
+    color: @white;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 3px 5px;
+    vertical-align: top;
+  }
 }
 //Фон контент;
 .br-content {
@@ -214,8 +724,11 @@ input.placeholder:focus:-ms-input-placeholder      {opacity: 0; transition: opac
     border-color: fade(@grey - 90,40%);
   }
 }
+.sm-text{
+   font-size: 11px;
+   color: @grey1;
+}
 /*Набор Иконки*/
-
 /*---Социал---*/
 .icon-vk {
   background: url("@{images_d}icon-vk.png") no-repeat;
@@ -305,6 +818,29 @@ input.placeholder:focus:-ms-input-placeholder      {opacity: 0; transition: opac
   position: relative;
   vertical-align: sub;
   width: 8px;
+}
+.icon-cub {
+  background: url("@{images_d}cub.png") no-repeat;
+  height: 50px;
+  width: 50px;
+}
+.icon-video {
+  background: url("@{images_d}main-video.png") no-repeat;
+  height: 50px;
+  width: 50px;
+  &.blue{
+    background: url("@{images_d}video-icon.png") no-repeat;
+  }
+}
+.icon-news {
+  background: url("@{images_d}main-news.png") no-repeat;
+  height: 50px;
+  width: 50px;
+}
+.icon-photos {
+  background: url("@{images_d}main-photos.png") no-repeat;
+  height: 50px;
+  width: 50px;
 }
 /*Цвета фон*/
 .primary-com {

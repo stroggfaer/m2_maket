@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
 
@@ -23,10 +21,16 @@
     <link  rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
     <link  rel="stylesheet" href="js/bootstrap/css/bootstrap-theme.min.css">
     <!--bootstrap 3-->
+    <!--script plugin-->
+    <link rel="stylesheet" type="text/css" href="scripts/carousel/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="scripts/carousel/owl.theme.css" />
+    <script type="text/javascript" src="scripts/carousel/owl.carousel.min.js"></script>
+    <!--/script plugin-->
     <!--Style-->
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/global.css">
     <link type="text/css" rel="stylesheet" href="css/screen.css"><!--/Style-->
+
     <!--Script-->
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/global.js"></script> <!--/Script-->
@@ -121,50 +125,203 @@
        </div>  <!--Меню-->
        <!--Контент-->
        <div id="center">
-           <div class="container-fluid">
+           <div class="container mod">
                <!--Главная страница-->
                <div class="main">
-                   <div class="title">Вход для клиентов клуба</div>
-                   <!--Форма войти-->
-                   <div class="form1__com">
-                       <form role="form">
-                           <div class="form-group">
-                               <input type="tel" class="form-control placeholder-right" placeholder="Номер карты">
+                   <!--Дестктопная версия-->
+                   <div class="desktop">
+                      <!--Slides-->
+                      <div class="main-slides ">
+                           <div class="items">
+                               <div class="item"><a href="#"><img src="./files/slides/1042.jpg" alt="12" /></a></div>
+                               <div class="item"><a href="#"><img src="./files/slides/1042.jpg" alt="12" /></a></div>
+                               <div class="item"><a href="#"><img src="./files/slides/1042.jpg" alt="12" /></a></div>
                            </div>
-                           <div class="form-group">
-                               <input type="tel" class="form-control placeholder-right" placeholder="Телефон">
-                           </div>
-                           <div class="form-group">
-                               <button type="button" class="btn button-mod">Войти</button>
-                           </div>
-                       </form>
+                       </div><!-- /Слайд -->
+                       <div class="block-container">
+                           <!--Новости-->
+                           <div class="main-news">
+                               <h3 class="title"><a href="/news/" class="black-normal">НОВОСТИ КЛУБА ></a></h3>
+                               <div class="row-container">
+                                   <div class="images"><a href="/news/"><img src="http://www.extremefitness.ru/files/news/1543.jpg" alt="" /></a></div>
+                                   <div class="description">
+                                       <div class="title"><span class="date">16.05.2017</span><a href="/news/{$newsrot.id}" class="red-normal">УВАЖАЕМЫЕ КЛИЕНТЫ КЛУБА ВЕРСАЛЬ!</a></div>
+                                       Уважаемые клиенты клуба Версаль! Обратите внимание, в четверг 18.05.17 групповые тренировки по функциональному многоборью будут отменены...
+                                       <a href="/news/{$newsrot.id}" class="icon-plus"> Читать полностью</a>
+                                   </div>
+                               </div>
+                               <div class="clear"></div>
+                           </div><!--/Новости-->
+                           <!--Фото-->
+                           <div class="main-photo">
+                               <h3 class="title"><a href="/photos/" class="black-normal">Фотоотчеты ></a></h3>
+                               <div class="photo">
+                                   <a href="/photos/{$photos_groups.id}"><div class="image"><img src="http://www.extremefitness.ru/files/photos/31/10032834.jpg" alt=""></div><div class="title">{$photos_groups.title}</div></a>
+                               </div>
+                               <div class="clear"></div>
+                           </div><!--/Фото-->
+                       </div>
+                       <div class="block-container mod">
+                           <!--Распиание-->
+                           <div class="schedule-tabs">
+                               <div class="tab-container">
+                                   <div class="tab-captions">
+                                       <div class="name">Занятия сегодня:</div>
+                                       <div class="item open"><a href="/clubs/{$item.url}#schedules" class="black">EXTREME FITNESS PLUS</a><div><span class="m">M.</span>M.Заельцовская </div> <div class="icon-sh"></div></div>
+                                       <div class="item"><a href="/clubs/{$item.url}#schedules" class="black">EXTREME FITNESS</a><div><span class="m">M.</span>M.Заельцовская </div> <div class="icon-sh"></div></div>
+                                       <div class="item"><a href="/clubs/{$item.url}#schedules" class="black">EXTREME FITNESS</a><div><span class="m">M.</span>M.Заельцовская </div> <div class="icon-sh"></div></div>
+                                       <div class="item"><a href="/clubs/{$item.url}#schedules" class="black">EXTREME FITNESS</a><div><span class="m">M.</span>M.Заельцовская </div> <div class="icon-sh"></div></div>
+                                       <div class="item"><a href="/clubs/{$item.url}#schedules" class="black">EXTREME FITNESS</a><div><span class="m">M.</span>M.Заельцовская </div> <div class="icon-sh"></div></div>
+                                       <div class="item"><a href="/clubs/{$item.url}#schedules" class="black">EXTREME FITNESS</a><div><span class="m">M.</span>M.Заельцовская </div> <div class="icon-sh"></div></div>
+                                   </div>
+                                   <div class="tab-contents">
+                                       <div class="name"><a href="/clubs/club1006" class="white-normal">Полное расписание ></a></div>
+                                       <div class="item open">
+                                           <div class="i">
+                                               <div class="trainer"><img src="http://www.extremefitness.ru/files/trainers/1036_min.png" alt="" /></div>
+                                               <div class="row-i">
+                                                   <div class="time">10:00</div>
+                                                   <div class="area">
+                                                       <a href="/areas/{$i.area_url}" class="area white-normal">Пилатес</a>
+                                                       <a href="/trainers/{$i.trainer_id}" class="border-white">Лющенко Дарина</a>
+                                                   </div>
+                                                   <div class="icon-right-tab"  onclick="location.href = '/clubs/{$item.url}/#schedules';"></div>
+                                               </div>
+                                           </div>
+                                           <div class="i">
+                                               <div class="trainer"><img src="http://www.extremefitness.ru/files/trainers/1036_min.png" alt="" /></div>
+                                               <div class="row-i">
+                                                   <div class="time">10:00</div>
+                                                   <div class="area">
+                                                       <a href="/areas/{$i.area_url}" class="area white-normal">Пилатес</a>
+                                                       <a href="/trainers/{$i.trainer_id}" class="border-white">Лющенко Дарина</a>
+                                                   </div>
+                                                   <div class="icon-right-tab"  onclick="location.href = '/clubs/{$item.url}/#schedules';"></div>
+                                               </div>
+                                           </div>
+                                           <div class="i">
+                                               <div class="trainer"><img src="http://www.extremefitness.ru/files/trainers/1036_min.png" alt="" /></div>
+                                               <div class="row-i">
+                                                   <div class="time">10:00</div>
+                                                   <div class="area">
+                                                       <a href="/areas/{$i.area_url}" class="area white-normal">Пилатес</a>
+                                                       <a href="/trainers/{$i.trainer_id}" class="border-white">Лющенко Дарина</a>
+                                                   </div>
+                                                   <div class="icon-right-tab"  onclick="location.href = '/clubs/{$item.url}/#schedules';"></div>
+                                               </div>
+                                           </div>
+                                           <div class="i">
+                                               <div class="trainer"><img src="http://www.extremefitness.ru/files/trainers/1036_min.png" alt="" /></div>
+                                               <div class="row-i">
+                                                   <div class="time">10:00</div>
+                                                   <div class="area">
+                                                       <a href="/areas/{$i.area_url}" class="area white-normal">Пилатес</a>
+                                                       <a href="/trainers/{$i.trainer_id}" class="border-white">Лющенко Дарина</a>
+                                                   </div>
+                                                   <div class="icon-right-tab"  onclick="location.href = '/clubs/{$item.url}/#schedules';"></div>
+                                               </div>
+                                           </div>
+                                           <div class="i">
+                                               <div class="trainer"><img src="http://www.extremefitness.ru/files/trainers/1036_min.png" alt="" /></div>
+                                               <div class="row-i">
+                                                   <div class="time">10:00</div>
+                                                   <div class="area">
+                                                       <a href="/areas/{$i.area_url}" class="area white-normal">Пилатес</a>
+                                                       <a href="/trainers/{$i.trainer_id}" class="border-white">Лющенко Дарина</a>
+                                                   </div>
+                                                   <div class="icon-right-tab"  onclick="location.href = '/clubs/{$item.url}/#schedules';"></div>
+                                               </div>
+                                           </div>
+                                              <p class="hidden">Сегодня групповые тренировки в этом клубе закончились!  Ждем вас <a href="/clubs/{$item.url}#schedules">завтра!</a></p>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="clear"></div>
+                           </div><!--/Распиание-->
+                       </div>
+                       <div class="clear"></div>
+                       <!--Апсел товаров-->
+                       <noindex>
+                           <div class="main-goods">
+                               <div class="row-container">
+                                   <img src="./images/desktop/logo_shop.png">
+                                   <h3 class="title">— популярно сегодня:</h3>
+                                   <a href="https://www.extremeshop.ru/catalog/sports/" target="_blank"  rel="nofollow">В МАГАЗИН <div class="icon-right-goods"></div> </a>
+                               </div>
+                               <div class="item">
+                                   <div class="images"><a href="{$item.href}" target="_blank"  rel="nofollow"><img src="https://www.extremeshop.ru/files/goods/ed/1000493218.jpg"  class="ad"/> </a></div>
+                                   <div class="title"><a href="{$item.href}" class="black-normal" target="_blank"  rel="nofollow">1 кг Яблоко Симиренко</a></div>
+                                   <div class="price">89 p</div>
+                                   <div class="button"><a href="{$item.href}" class="button_orang" target="_blank"  rel="nofollow">КУПИТЬ<span class="icon-prev"></span></a></div>
+                               </div>
+                               <div class="item">
+                                   <div class="images"><a href="{$item.href}" target="_blank"  rel="nofollow"><img src="https://www.extremeshop.ru/files/goods/7e/1000493261.jpg"  class="ad"/> </a></div>
+                                   <div class="title"><a href="{$item.href}" class="black-normal" target="_blank"  rel="nofollow">Арахисовая паста с кокосом 400 г</a></div>
+                                   <div class="price">89 p</div>
+                                   <div class="button"><a href="{$item.href}" class="button_orang" target="_blank"  rel="nofollow">КУПИТЬ<span class="icon-prev"></span></a></div>
+                               </div>
+                               <div class="item">
+                                   <div class="images"><a href="{$item.href}" target="_blank"  rel="nofollow"><img src="https://www.extremeshop.ru/files/goods/ed/1000493218.jpg"  class="ad"/> </a></div>
+                                   <div class="title"><a href="{$item.href}" class="black-normal" target="_blank"  rel="nofollow">1 кг Яблоко Симиренко</a></div>
+                                   <div class="price">89 p</div>
+                                   <div class="button"><a href="{$item.href}" class="button_orang" target="_blank"  rel="nofollow">КУПИТЬ<span class="icon-prev"></span></a></div>
+                               </div>
+                               <div class="item">
+                                   <div class="images"><a href="{$item.href}" target="_blank"  rel="nofollow"><img src="https://www.extremeshop.ru/files/goods/ed/1000493218.jpg"  class="ad"/> </a></div>
+                                   <div class="title"><a href="{$item.href}" class="black-normal" target="_blank"  rel="nofollow">1 кг Яблоко Симиренко</a></div>
+                                   <div class="price">89 p</div>
+                                   <div class="button"><a href="{$item.href}" class="button_orang" target="_blank"  rel="nofollow">КУПИТЬ<span class="icon-prev"></span></a></div>
+                               </div>
+                               <div class="clear"></div>
+                           </div><!--/Апсел товаров-->
+                       </noindex>
                    </div>
-                   <!--/Форма войти-->
-                   <div class="title">Новости клуба</div>
-                   <!--Новости-->
-                   <div class="news news___com">
-                       <div class="item">
-                           <a class="block no_border" href="#">
-                               <div class="name">Уважаемые клиенты клуба на Советской!</div>
-                               <div class="date">25 апр. 2017 г.</div>
-                           </a>
-                           <hr>
+                   <!--/Дестктопная версия-->
+                   <!--Мобильная версия-->
+                   <div class="mobile">
+                       <div class="title">Вход для клиентов клуба</div>
+                       <!--Форма войти-->
+                       <div class="form1__com ">
+                           <form role="form">
+                               <div class="form-group">
+                                   <input type="tel" class="form-control placeholder-right" placeholder="Номер карты">
+                               </div>
+                               <div class="form-group">
+                                   <input type="tel" class="form-control placeholder-right" placeholder="Телефон">
+                               </div>
+                               <div class="form-group">
+                                   <button type="button" class="btn button-mod">Войти</button>
+                               </div>
+                           </form>
                        </div>
-                       <div class="item">
-                           <a class="block no_border" href="#">
-                               <div class="name">Уважаемые клиенты клуба на Советской!</div>
-                               <div class="date">25 апр. 2017 г.</div>
-                           </a>
-                           <hr>
-                       </div>
-                       <div class="item">
-                           <a class="block no_border" href="#">
-                               <div class="name">Уважаемые клиенты клуба на Советской!</div>
-                               <div class="date">25 апр. 2017 г.</div>
-                           </a>
-                           <hr>
-                       </div>
-                   </div> <!--/Новости-->
+                       <!--/Форма войти-->
+                       <div class="title">Новости клуба</div>
+                       <!--Новости-->
+                       <div class="news news___com">
+                           <div class="item">
+                               <a class="block no_border" href="#">
+                                   <div class="name">Уважаемые клиенты клуба на Советской!</div>
+                                   <div class="date">25 апр. 2017 г.</div>
+                               </a>
+                               <hr>
+                           </div>
+                           <div class="item">
+                               <a class="block no_border" href="#">
+                                   <div class="name">Уважаемые клиенты клуба на Советской!</div>
+                                   <div class="date">25 апр. 2017 г.</div>
+                               </a>
+                               <hr>
+                           </div>
+                           <div class="item">
+                               <a class="block no_border" href="#">
+                                   <div class="name">Уважаемые клиенты клуба на Советской!</div>
+                                   <div class="date">25 апр. 2017 г.</div>
+                               </a>
+                               <hr>
+                           </div>
+                       </div> <!--/Новости-->
+                   </div>
+                   <!--/Мобильная версия-->
                    <div class="clear"></div>
                </div> <!--/Главная страница-->
            </div>
@@ -208,7 +365,7 @@
                    </div>
                    <div class="contacts">
                        <div class="phone"><span class="reg">8(383)</span>349-90-90</div>
-                       <div class="des">единая справочная <span class="reg">Пн-Чт, с 9.00-21.00<br> <span style="text-align:right;margin:0 5px 0 0px;display:block">Пт c 9.00-17.00</span></span></div>
+                       <div class="des">единая справочная <span class="reg">Пн-Чт, с 9.00-21.00<br> <span style="text-align:right;margin:0 2px 0 0px;display:block">Пт c 9.00-17.00</span></span></div>
                        <div class="phone hidden"><span class="reg">8(383)</span>255-50-14</div>
                        <div class="des hidden">по вопросам размещения рекламы</div>
                        <div class="phone hidden"><span class="reg">8(383)</span>248-33-09</div>

@@ -2,8 +2,9 @@
  Version 2.0.0
 */
 /*Анимерованый бутерброд*/
-.my {
+.my div {
   color: #fff;
+  font-size: inherit;
 }
 .my .title {
   font-size: 16px;
@@ -11,7 +12,7 @@
   padding: 15px 0;
 }
 .my .client-info {
-  padding: 10px 0px;
+  padding: 20px 0px;
 }
 .my .client-info:before,
 .my .client-info:after {
@@ -71,12 +72,18 @@
   padding: 5px 0px;
 }
 .my .widgets .col-mod {
-  position: relative;
   float: left;
   width: 50%;
+  position: relative;
   min-height: 1px;
   padding-left: 0px;
   padding-right: 0px;
+}
+@media (min-width: 992px) {
+  .my .widgets .col-mod {
+    float: left;
+    width: 25%;
+  }
 }
 .my .widgets .balance {
   padding: 8px 0 2px;
@@ -106,6 +113,7 @@
 .my .reservations .tab .item div {
   color: #fff;
   font-size: 14px;
+  text-align: center;
 }
 .my .reservations .tab .item.open {
   border-bottom: 2px solid #fff;
