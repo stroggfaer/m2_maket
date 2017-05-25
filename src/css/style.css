@@ -805,6 +805,102 @@ div.menu_bottom .search_header input.button {
   margin: 20px 0 0;
   width: 215px;
 }
+.registration {
+  margin-top: 15px;
+}
+.registration div.title {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+.registration .text {
+  width: 90%;
+}
+.registration .col-com {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+@media (min-width: 992px) {
+  .registration .col-com {
+    float: left;
+    width: 50%;
+  }
+}
+.registration .form-normal .promo {
+  width: 124px;
+}
+.registration .form-normal .form-group.input {
+  width: 285px;
+}
+.registration .form-normal .form-inline .phone {
+  float: left;
+  margin-right: 5px;
+  width: 167px;
+}
+.registration .form-normal .form-inline .phone:before,
+.registration .form-normal .form-inline .phone:after {
+  content: " ";
+  display: table;
+}
+.registration .form-normal .form-inline .phone:after {
+  clear: both;
+}
+.registration .form-normal .form-inline .phone:before,
+.registration .form-normal .form-inline .phone:after {
+  content: " ";
+  display: table;
+}
+.registration .form-normal .form-inline .phone:after {
+  clear: both;
+}
+.registration .form-registration {
+  margin: 0px;
+  position: relative;
+}
+.registration .form-registration .disabled-bg {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.registration .pay {
+  margin-top: 15px;
+  background: #FAF2D8;
+  padding: 0 15px 15px;
+}
+.registration .pay .block {
+  margin: 0;
+}
+.registration .pay .block .text-info {
+  margin: 0;
+  color: #747474;
+}
+.registration .pay .block .result {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0;
+}
+.registration .pay .block .result .discount {
+  color: #747474;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+.registration .pay .block .checkbox {
+  margin: 0px 0px 10px;
+}
+.registration .pay .block .checkbox label {
+  display: block;
+  line-height: 23px;
+}
+.registration .pay .block .visa {
+  margin: 8px 0 0;
+}
 /*----Личный кабинет----
  Version 2.0.0
 */

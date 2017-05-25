@@ -214,7 +214,6 @@ a.blue {
 /*-------------Компонененты-------------*/
 /*Фомра 1*/
 .form1__com {
-
   // Миксы кнопка;
   .button-attr(#000,100%,10px 0px,16px);
   .form-group{
@@ -245,8 +244,28 @@ a.blue {
     }
   }
 }
-/*Фомра 2*/
 
+/*Фомра 2*/
+.form-normal{
+   margin: 0px;
+   .form-group{
+       // Формы
+       .form-control{
+           input.phone{
+
+           }
+           input.number{
+
+           }
+           input.string{
+
+           }
+       }
+       label{
+         line-height:23px;
+       }
+   }
+}
 // Блок новости;
 .news___com {
   .item {
@@ -580,7 +599,7 @@ a.blue {
 }
 
 //Карточка виджет;
-.cards__com{
+.box__com{
    .item{
      border: 1px solid @grey;
      border-radius: 5px;
@@ -615,6 +634,58 @@ a.blue {
         font-weight: bold;
       }
    }
+}
+
+// Карточка абонемент;
+.cards__com{
+    .item{
+      padding: 5px;
+      margin: 0px 5px 10px 5px;
+      border: 1px solid @grey;
+      border-radius: 3px;
+      max-width: 218px;
+      min-width: 210px;
+      .info{
+         cursor: pointer;
+         font-size: 16px;
+         position: absolute;
+         right: 5px;
+         top: 5px;
+         color:@reg1;
+      }
+      &.open{
+          border-color: @green ;
+      }
+      &.col-item{
+        .make-xs-column(6,10px);
+        .make-md-column(4,10px);
+
+      }
+      .title{
+          font-size: 14px;
+          padding: 3px 0;
+        }
+      .col-com{
+        .make-xs-column(6,0px);
+      }
+      .block{
+        padding-left: 5px;
+          .price{
+            font-size: 16px;
+            font-weight: bold;
+          }
+         .description{
+           color: @grey1;
+           font-size: 11px;
+           margin: 2px 0;
+        }
+      }
+
+        button{
+          padding: 3px 10px;
+          width: 100%;
+        }
+      }
 }
 
 /*-----Настройка плагины-----*/
@@ -841,6 +912,11 @@ a.button_orang:hover{
   background: url("@{images_d}main-photos.png") no-repeat;
   height: 50px;
   width: 50px;
+}
+.icon-visa {
+  background: url("../images/visa-icon.png") no-repeat;
+  height: 22px;
+  width: 75px;
 }
 /*Цвета фон*/
 .primary-com {

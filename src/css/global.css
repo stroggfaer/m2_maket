@@ -257,6 +257,12 @@ a.blue.dashed:hover {
   color: #fff;
 }
 /*Фомра 2*/
+.form-normal {
+  margin: 0px;
+}
+.form-normal .form-group label {
+  line-height: 23px;
+}
 .news___com .item hr {
   margin: 15px;
   border-color: #717171;
@@ -615,7 +621,7 @@ a.blue.dashed:hover {
     border-bottom: 2px solid #11B342;
   }
 }
-.cards__com .item {
+.box__com .item {
   border: 1px solid #CBCBCB;
   border-radius: 5px;
   height: 240px;
@@ -626,28 +632,89 @@ a.blue.dashed:hover {
   width: 280px;
   box-shadow: 0 4px 5px -3px #CBCBCB;
 }
-.cards__com .item.float {
+.box__com .item.float {
   float: left;
 }
-.cards__com .item .img {
+.box__com .item .img {
   position: relative;
   margin-bottom: 25px;
 }
-.cards__com .item .img a {
+.box__com .item .img a {
   display: block;
   height: 150px;
   overflow: hidden;
 }
-.cards__com .item .icon {
+.box__com .item .icon {
   bottom: -25px;
   left: 0;
   margin: 0 auto;
   position: absolute;
   right: 0;
 }
-.cards__com .item a {
+.box__com .item a {
   font-size: 16px;
   font-weight: bold;
+}
+.cards__com .item {
+  padding: 5px;
+  margin: 0px 5px 10px 5px;
+  border: 1px solid #CBCBCB;
+  border-radius: 3px;
+  max-width: 218px;
+  min-width: 210px;
+}
+.cards__com .item .info {
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #E25D57;
+}
+.cards__com .item.open {
+  border-color: #11B342;
+}
+.cards__com .item.col-item {
+  float: left;
+  width: 50%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media (min-width: 992px) {
+  .cards__com .item.col-item {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.cards__com .item .title {
+  font-size: 14px;
+  padding: 3px 0;
+}
+.cards__com .item .col-com {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.cards__com .item .block {
+  padding-left: 5px;
+}
+.cards__com .item .block .price {
+  font-size: 16px;
+  font-weight: bold;
+}
+.cards__com .item .block .description {
+  color: #747474;
+  font-size: 11px;
+  margin: 2px 0;
+}
+.cards__com .item button {
+  padding: 3px 10px;
+  width: 100%;
 }
 /*-----Настройка плагины-----*/
 div.photo-gallery .item {
@@ -942,6 +1009,11 @@ a.button_orang:hover {
   background: url("../images/desktop/main-photos.png") no-repeat;
   height: 50px;
   width: 50px;
+}
+.icon-visa {
+  background: url("../images/visa-icon.png") no-repeat;
+  height: 22px;
+  width: 75px;
 }
 /*Цвета фон*/
 .primary-com {

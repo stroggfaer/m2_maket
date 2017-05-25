@@ -801,7 +801,85 @@ div.menu_bottom {
 
 .clubs{
 }
+// Покупка абонемент;
+.registration{
+  margin-top: 15px;
+   div.title {
+     font-size: 15px;
+     font-weight: bold;
+     padding: 10px 0;
+   }
+    .text{
+      width: 90%;
+    }
+   .col-com{
+     .make-md-column(6,0px);
+   }
+  .form-normal{
+     .promo{
+         width: 124px;
+     }
+     .form-group.input{
+        width: 285px;
+     }
+     .form-inline{
+       .phone {
+         float: left;
+         margin-right: 5px;
+         width: 167px;
+         .clearfix();
+       }
+     }
+  }
+  .form-registration{
+     margin: 0px;
+     position: relative;
+     .disabled-bg{
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        background: rgba(255,255,255,0.5);
+        top: 0;
+        width: 100%;
+        z-index: 100;
+     }
+  }
+  .pay{
+     margin-top: 15px;
+     background: @orange1;
+     padding: 0 15px 15px;
+     .block{
+       margin: 0;
+        .text-info{
+          margin: 0;
+          color: @grey1;
+        }
+        .result{
+          font-size: 15px;
+          font-weight: bold;
+          margin: 0;
+          padding: 5px 0;
+          .discount{
 
+            color:@grey1;
+            font-weight: normal;
+            text-decoration: line-through;
+          }
+        }
+
+       .checkbox{
+         margin: 0px 0px 10px;
+           label{
+               display: block;
+               line-height: 23px;
+           }
+       }
+       .visa{
+         margin: 8px 0 0;
+       }
+     }
+  }
+}
 
 
 
