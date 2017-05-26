@@ -191,16 +191,47 @@
     -webkit-overflow-scrolling: touch;
     height: 100%;
   }
+  #menu_left .menu-content .menu-left-rel .panel-footer-menu {
+    border-top: 1px solid #232323;
+    padding: 10px 12px;
+  }
+  #menu_left .menu-content .menu-left-rel .panel-footer-menu .phone {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    padding: 5px 0;
+    font-weight: bold;
+  }
+  #menu_left .menu-content .menu-left-rel .panel-footer-menu .phone span {
+    color: #E25D57;
+  }
+  #menu_left .menu-content .menu-left-rel .panel-footer-menu .time {
+    font-size: 11px;
+    color: red;
+  }
   #menu_left .menu-content .menu-left-rel .items {
     margin: 0px;
   }
   #menu_left .menu-content .menu-left-rel .items .item {
     display: block;
     font-size: 16px;
-    padding: 10px 5px;
+    padding: 10px 12px;
+    color: #fff;
+    border-top: 1px solid #232323 !important;
+    position: relative;
   }
   #menu_left .menu-content .menu-left-rel .items .item:hover {
     background: #C81A18;
+  }
+  #menu_left .menu-content .menu-left-rel .items .item:after {
+    content: "\e113";
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    right: 10px;
+    transform: rotate(90deg);
+    font-family: 'Glyphicons Halflings';
+    top: 11px;
   }
   #footer {
     width: 100%;

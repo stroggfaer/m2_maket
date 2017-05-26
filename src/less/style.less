@@ -63,6 +63,10 @@ body {
   background: fade(@black,40%);
   .container-fluid.desktop {
     color: @white;
+     .logo{
+       margin: 0 auto;
+       width: 240px;
+     }
     .border-right{
       &::after {
         border-right: 1px dotted @grey1;
@@ -74,8 +78,8 @@ body {
       }
     }
     .social {
-      margin: 12px 20px 0 0;
-      text-align: right;
+      margin: 12px 0 0;
+      text-align: center;
       a {
         display: inline-block;
       }

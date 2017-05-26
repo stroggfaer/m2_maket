@@ -84,6 +84,10 @@ body {
 #header .container-fluid.desktop {
   color: #fff;
 }
+#header .container-fluid.desktop .logo {
+  margin: 0 auto;
+  width: 240px;
+}
 #header .container-fluid.desktop .border-right::after {
   border-right: 1px dotted #747474;
   content: "";
@@ -93,8 +97,8 @@ body {
   top: 0;
 }
 #header .container-fluid.desktop .social {
-  margin: 12px 20px 0 0;
-  text-align: right;
+  margin: 12px 0 0;
+  text-align: center;
 }
 #header .container-fluid.desktop .social a {
   display: inline-block;
